@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>いまここシートとJuno PDCA | こども訪問看護ステーションJuno</title>
+  <meta name="description" content="Junoが独自に監修した発達チェックツール「いまここシート」とJuno PDCAによる根拠ある発達支援の仕組みをご紹介します。">
+  <link rel="canonical" href="https://junochild.com/imacoco.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="webサイト用画像/ファビコン.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ─── ページ固有スタイル ─── */
+    .imahere-lead {
+      max-width: 720px;
+      margin-inline: auto;
+      text-align: center;
+      margin-bottom: 72px;
+    }
+    .imahere-lead__subtitle {
+      font-size: 1.05rem;
+      color: var(--juno-primary);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+    }
+    .imahere-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+      margin-bottom: 88px;
+    }
+    .imahere-block--reverse { direction: rtl; }
+    .imahere-block--reverse > * { direction: ltr; }
+    .imahere-block__text h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--juno-text);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .imahere-block__text h2 em {
+      font-style: normal;
+      color: var(--juno-primary);
+    }
+    .imahere-block__text p {
+      font-size: 0.9rem;
+      line-height: 1.9;
+      color: var(--juno-text-sub);
+      margin-bottom: 14px;
+    }
+    .imahere-8fields {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+    .imahere-8fields span {
+      background: var(--juno-primary-light);
+      color: var(--juno-primary-dark);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 100px;
+    }
+    /* SVGイラストラッパー */
+    .imahere-illust {
+      display: flex;
+      justify-content: center;
+    }
+    .imahere-illust img {
+      width: 100%;
+      max-width: 380px;
+      display: block;
+    }
+    /* シートサンプル画像 */
+    .sheet-samples {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 32px 0;
+    }
+    .sheet-sample {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .sheet-sample img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .sheet-sample__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(230,249,248,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .sheet-sample__label {
+      background: rgba(255,255,255,0.85);
+      color: var(--juno-primary-dark);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+    /* 強調ボックス */
+    .imahere-emphasis {
+      background: var(--juno-primary-light);
+      border-left: 4px solid var(--juno-primary);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      font-size: 0.9rem;
+      line-height: 1.85;
+      color: var(--juno-text);
+      margin: 24px 0;
+    }
+    .imahere-emphasis strong { color: var(--juno-primary-dark); }
+    /* PDCAステップ */
+    .pdca-flow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin: 40px 0;
+      position: relative;
+    }
+    .pdca-flow__step {
+      text-align: center;
+      padding: 28px 16px;
+      position: relative;
+    }
+    .pdca-flow__step:not(:last-child)::after {
+      content: '→';
+      position: absolute;
+      right: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.4rem;
+      color: var(--juno-primary);
+      z-index: 1;
+    }
+    .pdca-flow__label {
+      display: inline-block;
+      background: var(--juno-primary);
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      width: 52px;
+      height: 52px;
+      line-height: 52px;
+      border-radius: 50%;
+      margin-bottom: 12px;
+    }
+    .pdca-flow__title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--juno-text);
+      margin-bottom: 6px;
+    }
+    .pdca-flow__desc {
+      font-size: 0.75rem;
+      color: var(--juno-text-sub);
+      line-height: 1.6;
+    }
+    .pdca-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 32px 0;
+      font-size: 0.875rem;
+    }
+    .pdca-table th {
+      background: var(--juno-primary);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+    }
+    .pdca-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--juno-bg-alt);
+      color: var(--juno-text-sub);
+      line-height: 1.7;
+      vertical-align: top;
+    }
+    .pdca-table tr:nth-child(even) td { background: var(--juno-primary-light); }
+    .pdca-table td:first-child {
+      font-weight: 700;
+      color: var(--juno-primary-dark);
+      white-space: nowrap;
+      width: 120px;
+    }
+    /* 差別化メッセージ */
+    .imahere-diff {
+      background: var(--juno-primary);
+      color: #fff;
+      border-radius: var(--radius-card);
+      padding: 40px 48px;
+      text-align: center;
+      margin: 48px 0;
+    }
+    .imahere-diff__title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .imahere-diff__body {
+      font-size: 0.875rem;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.88);
+    }
+    /* bullet list */
+    .imahere-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .imahere-list li {
+      display: flex;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: var(--juno-text-sub);
+      line-height: 1.7;
+      padding-left: 0;
+    }
+    .imahere-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--juno-primary);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+    /* CTA */
+    .imahere-cta {
+      text-align: center;
+      padding: 64px 0 0;
+    }
+    .imahere-cta h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--juno-text);
+      margin-bottom: 12px;
+    }
+    .imahere-cta p {
+      font-size: 0.875rem;
+      color: var(--juno-text-sub);
+      margin-bottom: 32px;
+    }
+    .imahere-cta__btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .imahere-cta__note {
+      font-size: 0.75rem;
+      color: var(--juno-text-sub);
+      margin-top: 12px;
+    }
+    /* レスポンシブ */
+    @media (max-width: 768px) {
+      .imahere-block { grid-template-columns: 1fr; gap: 32px; }
+      .imahere-block--reverse { direction: ltr; }
+      .pdca-flow { grid-template-columns: 1fr 1fr; }
+      .pdca-flow__step:nth-child(2)::after { display: none; }
+      .pdca-flow__step:nth-child(4)::after { display: none; }
+      .sheet-samples { grid-template-columns: 1fr 1fr; }
+      .imahere-diff { padding: 32px 24px; }
+      .pdca-table td:first-child { width: 80px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="メインナビゲーション">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="Junoトップページへ">
+      <img src="logo.png" alt="こども訪問看護ステーションJuno" class="nav__logo-img">
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="about.html"   class="nav__link">私たちについて</a></li>
+      <li><a href="service.html" class="nav__link">事業内容</a></li>
+      <li><a href="faq.html"     class="nav__link">FAQ</a></li>
+      <li><a href="news.html"    class="nav__link">新着情報</a></li>
+      <li><a href="recruit.html" class="nav__link">採用</a></li>
+      <li><a href="contact.html" class="btn btn--primary nav__cta">お問い合わせ</a></li>
+    </ul>
+    <button class="nav__hamburger" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav__mobile" role="menu">
+    <a href="about.html"   class="nav__link" role="menuitem">私たちについて</a>
+    <a href="service.html" class="nav__link" role="menuitem">事業内容</a>
+    <a href="faq.html"     class="nav__link" role="menuitem">FAQ</a>
+    <a href="news.html"    class="nav__link" role="menuitem">新着情報</a>
+    <a href="recruit.html" class="nav__link" role="menuitem">採用</a>
+    <a href="contact.html" class="btn btn--primary" role="menuitem">お問い合わせ</a>
+  </div>
+</nav>
+
+<header class="page-header">
+  <svg class="page-header__blob" viewBox="0 0 1200 240" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <!-- 大きな円（右上） -->
+    <circle cx="1100" cy="-30" r="180" fill="rgba(255,255,255,0.07)"/>
+    <circle cx="1050" cy="60"  r="100" fill="rgba(255,255,255,0.06)"/>
+    <!-- 大きな円（左下） -->
+    <circle cx="80"  cy="260" r="140" fill="rgba(255,255,255,0.06)"/>
+    <circle cx="160" cy="220" r="70"  fill="rgba(255,255,255,0.05)"/>
+    <!-- 小さな浮遊円 -->
+    <circle cx="320" cy="40"  r="18" fill="rgba(255,255,255,0.12)"/>
+    <circle cx="560" cy="20"  r="10" fill="rgba(255,255,255,0.15)"/>
+    <circle cx="780" cy="55"  r="14" fill="rgba(255,255,255,0.10)"/>
+    <circle cx="960" cy="30"  r="8"  fill="rgba(255,255,255,0.18)"/>
+    <circle cx="430" cy="190" r="12" fill="rgba(255,255,255,0.10)"/>
+    <circle cx="700" cy="180" r="20" fill="rgba(255,255,255,0.07)"/>
+    <!-- ハート（小） -->
+    <path d="M200,50 C200,44 206,38 213,42 C220,38 226,44 226,50 C226,58 213,68 213,68 C213,68 200,58 200,50Z" fill="rgba(255,255,255,0.15)"/>
+    <path d="M850,25 C850,20 855,15 861,18 C867,15 872,20 872,25 C872,32 861,40 861,40 C861,40 850,32 850,25Z" fill="rgba(255,255,255,0.12)"/>
+    <!-- 紙飛行機 -->
+    <path d="M480,80 L520,65 L500,85Z" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <path d="M480,80 L520,65 L505,75Z" fill="rgba(255,255,255,0.10)"/>
+    <!-- 点線軌跡 -->
+    <path d="M485,78 Q510,60 540,55" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <!-- 波形（下部） -->
+    <path d="M0,195 Q150,170 300,188 Q450,206 600,185 Q750,164 900,182 Q1050,200 1200,178 L1200,240 L0,240Z" fill="rgba(255,255,255,0.10)"/>
+    <path d="M0,215 Q200,195 400,210 Q600,225 800,205 Q1000,185 1200,208 L1200,240 L0,240Z" fill="rgba(255,255,255,0.07)"/>
+  </svg>
+  <div class="container">
+    <p class="page-header__sub">imacoco Sheet &amp; Juno PDCA</p>
+    <h1 class="page-header__title">いまここシートとJuno PDCA</h1>
+    <p style="color:rgba(255,255,255,0.88);margin-top:8px;font-size:0.95rem;">お子さまの「現在地」から、根拠ある支援を組み立てます</p>
+  </div>
+</header>
+
+<section class="section" id="imahere-intro">
+  <div class="container">
+
+    <!-- リード文 -->
+    <div class="imahere-lead animate-on-scroll">
+      <p class="imahere-lead__subtitle">Junoによる発達支援の考え方</p>
+      <p style="font-size:0.95rem;color:var(--juno-text-sub);line-height:1.9;">「なんとなく気になる」から始まる支援は、目的が曖昧なままでは成長との関連性が見えづらくなります。Junoでは、「いまここシート」という独自のチェックツールと学術的知見を組み合わせた仕組みで、<strong>経験や勘・特定のスタッフに依存しない、根拠ある継続的な訪問支援</strong>を実現しています。</p>
+    </div>
+
+    <!-- ブロック① いまここシートの説明 -->
+    <div class="imahere-block animate-on-scroll">
+      <div class="imahere-block__text">
+        <div class="section__label" style="margin-bottom:16px;">Block 01</div>
+        <h2>お子さまの<em>「現在地」</em>を、<br>遊びの中で確認します。</h2>
+        <p>お子さまの発達は、年齢や診断名だけでは整理しきれないほど、多くの要素が重なり合っています。Junoでは、20,000回以上の訪問を通じて得たデータから独自に監修したチェックツール「いまここシート」を用いて、お子さまの今の状態（現在地）を複数の分野から丁寧に見ていきます。</p>
+        <p>チェックは、お子さまに「テスト」と感じさせない形で行います。ご家庭での遊びや関わりの中で、看護師がお子さまの自然な姿を観察し、ご家族からのお話と合わせて整理していきます。お子さまにもご家族にも、過度な負担がかからない形で進めていきますので、ご安心ください。</p>
+        <p style="font-size:0.875rem;line-height:1.85;padding:14px 18px;background:rgba(10,186,181,0.07);border-left:3px solid var(--juno-primary);border-radius:0 8px 8px 0;margin-bottom:0;">診断の有無は問いません。「なんとなく気になる」「グレーゾーンかもしれない」という段階からご利用いただけます。</p>
+        <div class="imahere-8fields">
+          <span>運動</span>
+          <span>言語</span>
+          <span>コミュニケーション</span>
+          <span>生活</span>
+          <span>その他</span>
+        </div>
+      </div>
+      <div class="imahere-illust">
+        <img src="webサイト用画像/イラスト_看護師と子供2.png" alt="看護師と子どもがチェックシートを使って関わるイラスト">
+      </div>
+    </div>
+
+    <!-- ブロック② シートサンプル -->
+    <div class="animate-on-scroll" style="margin-bottom:88px;">
+      <div class="section__label" style="margin-bottom:8px;">Block 02</div>
+      <h2 style="font-size:1.45rem;font-weight:700;margin-bottom:8px;">実際のシートをご覧ください</h2>
+      <p style="font-size:0.875rem;color:var(--juno-text-sub);margin-bottom:28px;">「いまここシート」では、お子さまの今できていることと、これから育てたい力の両方を整理します。「できていない部分」を探すためのものではなく、お子さまの強みと、これから一緒に育んでいきたい部分を、ご家族と共有するための<strong>地図</strong>のようなものです。</p>
+      <div class="sheet-samples">
+        <div class="sheet-sample">
+          <img src="webサイト用画像/チェックシート等/チェックシート.png" alt="いまここチェックシート" loading="lazy">
+          <div class="sheet-sample__overlay">
+            <span class="sheet-sample__label">チェックシート</span>
+          </div>
+        </div>
+        <div class="sheet-sample">
+          <img src="webサイト用画像/チェックシート等/分析サマリー1.png" alt="分析サマリー1" loading="lazy">
+          <div class="sheet-sample__overlay">
+            <span class="sheet-sample__label">分析サマリー</span>
+          </div>
+        </div>
+        <div class="sheet-sample">
+          <img src="webサイト用画像/チェックシート等/分析サマリー2.png" alt="分析サマリー2" loading="lazy">
+          <div class="sheet-sample__overlay">
+            <span class="sheet-sample__label">分析サマリー</span>
+          </div>
+        </div>
+        <div class="sheet-sample">
+          <img src="webサイト用画像/チェックシート等/分析レポート.png" alt="分析レポート" loading="lazy">
+          <div class="sheet-sample__overlay">
+            <span class="sheet-sample__label">分析レポート</span>
+          </div>
+        </div>
+      </div>
+      <div class="imahere-emphasis">
+        <strong>園・学校との情報共有にも活用できます。</strong><br>
+        このシートは、ご家庭での共有はもちろん、園や学校との情報共有にも活用していただけます。お子さまの状態を専門用語ではなく、関わるすべての方が共通して理解できる形で整理することを大切にしています。
+      </div>
+    </div>
+
+    <!-- ブロック③ Juno PDCA -->
+    <div class="animate-on-scroll" style="margin-bottom:88px;">
+      <div class="section__label" style="margin-bottom:8px;">Block 03</div>
+      <h2 style="font-size:1.45rem;font-weight:700;margin-bottom:16px;">「なんとなく」ではなく、<br>「根拠」から支援を組み立てます。</h2>
+      <p style="font-size:0.875rem;color:var(--juno-text-sub);line-height:1.9;margin-bottom:16px;">いまここシートで把握したお子さまの現在地・特性を、私たちはそれだけで判断しません。Junoでは、いまここシートに加えて、訪問記録、ご家族からのヒアリング情報、医療機関での検査結果（共有いただける場合）、そして臨床データが豊富な学術論文・研究知見を組み合わせて、お子さまの「育ちのつまづきの背景」を多面的に分析します。</p>
+      <p style="font-size:0.875rem;color:var(--juno-text-sub);line-height:1.9;margin-bottom:32px;">この一連の流れを、私たちは <strong style="color:var(--juno-primary-dark);">Juno PDCA</strong> と呼んでいます。</p>
+
+      <!-- PDCAフロー -->
+      <div class="pdca-flow">
+        <div class="pdca-flow__step">
+          <div class="pdca-flow__label">P</div>
+          <div class="pdca-flow__title">Plan｜仮説を立てる</div>
+          <div class="pdca-flow__desc">シート・記録・学術知見をもとに、課題と改善アプローチの仮説を組み立てます</div>
+        </div>
+        <div class="pdca-flow__step">
+          <div class="pdca-flow__label">D</div>
+          <div class="pdca-flow__title">Do｜訪問で実践</div>
+          <div class="pdca-flow__desc">仮説に基づいた関わり方を、訪問の中で丁寧に実践します</div>
+        </div>
+        <div class="pdca-flow__step">
+          <div class="pdca-flow__label">C</div>
+          <div class="pdca-flow__title">Check｜観察・記録</div>
+          <div class="pdca-flow__desc">お子さまの反応や変化などを詳細に記録し、臨床データとして蓄積します</div>
+        </div>
+        <div class="pdca-flow__step">
+          <div class="pdca-flow__label">A</div>
+          <div class="pdca-flow__title">Act｜仮説を更新</div>
+          <div class="pdca-flow__desc">蓄積された記録をもとに仮説を検証し、状況に応じて支援内容を改善、アップデートします</div>
+        </div>
+      </div>
+
+      <table class="pdca-table">
+        <thead>
+          <tr><th>ステップ</th><th>Junoが行うこと</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Plan（仮説）</td>
+            <td>いまここシート・訪問記録・ヒアリング・検査情報・学術知見をもとに、現在の課題と改善アプローチの仮説を組み立てます。</td>
+          </tr>
+          <tr>
+            <td>Do（実践）</td>
+            <td>仮説に基づいた関わり方を、訪問の中でお子さまの負担にならない形で実践します。</td>
+          </tr>
+          <tr>
+            <td>Check（記録）</td>
+            <td>訪問ごとに、お子さまの反応・変化・安心できた場面を詳細に記録し、臨床データとして蓄積します。</td>
+          </tr>
+          <tr>
+            <td>Act（更新）</td>
+            <td>蓄積した記録をもとに仮説を検証し、必要に応じてアプローチを更新します。</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="imahere-emphasis">
+        一つひとつの訪問が、次の支援の手がかりになる。<br>
+        <strong>Junoの訪問は、お子さまのための観察と仮説検証の積み重ねです。</strong>
+      </div>
+    </div>
+
+    <!-- ブロック④ 継続的な再検証 -->
+    <div class="animate-on-scroll" style="margin-bottom:64px;">
+      <div class="section__label" style="margin-bottom:8px;">Block 04</div>
+      <h2 style="font-size:1.45rem;font-weight:700;margin-bottom:16px;">経験や勘ではなく、<br>データと仮説で続ける訪問。</h2>
+      <p style="font-size:0.875rem;color:var(--juno-text-sub);line-height:1.9;margin-bottom:14px;">発達支援において、私たちが避けたいのは、「支援した気になっているけれど、お子さまが本当に成長しているかどうかわからない」という状態です。</p>
+      <p style="font-size:0.875rem;color:var(--juno-text-sub);line-height:1.9;margin-bottom:28px;">目的が曖昧なまま訪問を重ねるだけでは、お子さまの成長と支援のつながりは見えてきません。重ねてきた関わりが、お子さまの育ちに本当につながっているのか──。この問いに向き合い続けるために、Junoでは Juno PDCAというロジックに沿って、訪問看護を運営しています。</p>
+      <ul class="imahere-list">
+        <li><strong style="color:var(--juno-text);">定期的な再検証：</strong>いまここシートを一定期間ごとに再実施し、課題の改善状況を客観的に確認します。</li>
+        <li><strong style="color:var(--juno-text);">チームでの見立て更新：</strong>特定の看護師の経験や勘に依存せず、複数の視点で支援方針を見直します。</li>
+        <li><strong style="color:var(--juno-text);">学術知見との接続：</strong>新しい研究知見や臨床データを継続的に取り入れ、支援アプローチをアップデートします。</li>
+        <li><strong style="color:var(--juno-text);">担当看護師が変わっても続く支援：</strong>記録と仮説がチームで共有されているため、特定のスタッフに依存しない支援体制を維持します。</li>
+      </ul>
+      <p style="font-size:0.85rem;color:var(--juno-text-sub);margin:24px 0 10px;">振り返りでは、「できるようになったか」だけを見るのではなく、以下の視点から経過を確認します。</p>
+      <ul class="imahere-list" style="margin-bottom:32px;">
+        <li>安心して過ごせる時間が増えているか</li>
+        <li>負担がかかりやすい状況に変化があるか</li>
+        <li>関わり方の調整によって、反応の違いが見られるか</li>
+      </ul>
+      <div class="imahere-diff">
+        <p class="imahere-diff__title">誰が訪問しても、ぶれない支援を。<br>だから、長く・安定して、お子さまとご家族に伴走できます。</p>
+        <p class="imahere-diff__body">Junoが大切にしているのは、「誰が訪問しても同じ質の観察と分析ができる体制」です。シート・記録・学術知見・チームでの見立て更新という仕組みで、お子さまの成長を支え続けます。それが、私たちが児童精神と発達の領域で訪問看護を続けてきた中で辿り着いた答えです。</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="imahere-cta animate-on-scroll">
+      <h2>お子さまの「現在地」を、<br>一緒に整理してみませんか？</h2>
+      <p>訪問看護は医療保険が適用されます。まずはお気軽にご相談ください。</p>
+      <div class="imahere-cta__btns">
+        <a href="contact.html" class="btn btn--primary">まずは相談してみませんか？</a>
+        <a href="about.html"   class="btn btn--outline">Junoについてもっと知る</a>
+      </div>
+      <p class="imahere-cta__note">医療保険適用・費用負担なし</p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <img src="logo.png" alt="こども訪問看護ステーションJuno" class="footer__logo-img" loading="lazy">
+        <div class="footer__info">
+          〒458-0007 名古屋市緑区篭山2丁目104<br>神谷ビル2階A<br>
+          TEL: 052-627-3959 ／ FAX: 052-627-3960<br>
+          受付：8:30〜17:30（土日定休）<br>
+          対応エリア：名古屋市緑区・天白区・瑞穂区・東郷町
+        </div>
+        <div class="footer__sns">
+          <a href="https://note.com/junobranch" target="_blank" rel="noopener noreferrer" class="footer__sns-link" aria-label="noteを見る">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/juno_kango_hattatsu_nagoya?igsh=aDZpNTRiOXg5anJn&utm_source=qr" target="_blank" rel="noopener noreferrer" class="footer__sns-link" aria-label="Instagramを見る">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="footer__heading">サイトマップ</p>
+        <nav class="footer__nav" aria-label="フッターナビゲーション">
+          <a href="about.html">私たちについて</a>
+          <a href="service.html">事業内容・サービス</a>
+          <a href="imacoco.html">いまここシート</a>
+          <a href="faq.html">よくあるご質問</a>
+          <a href="news.html">新着情報</a>
+          <a href="recruit.html">採用情報</a>
+          <a href="contact.html">お問い合わせ</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer__heading">お問い合わせ</p>
+        <div class="footer__info">
+          <a href="mailto:hello@junochild.com" style="color:inherit;">hello@junochild.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 株式会社Juno Branch. All rights reserved.</p>
+      <p class="footer__copy">運営：株式会社Juno Branch</p>
+    </div>
+  </div>
+</footer>
+
+<div class="floating-cta">
+  <a href="https://forms.gle/hnKDimt3xWUCR43N7" target="_blank" rel="noopener noreferrer" class="floating-cta__btn" aria-label="相談してみる">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    相談してみる
+  </a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

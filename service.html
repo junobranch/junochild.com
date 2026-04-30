@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>事業内容・サービス | こども訪問看護ステーションJuno</title>
+  <meta name="description" content="Junoの訪問看護サービス詳細。発達が気になるお子さまから不登校まで、医療保険適用・費用負担なしで専門的な支援をご自宅へ届けます。">
+  <link rel="canonical" href="https://junochild.com/service.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="webサイト用画像/ファビコン.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ===== Section 1: こんなお子さま・ご家族へ ===== */
+    .symptom-intro {
+      max-width: 840px;
+      margin-inline: auto;
+      margin-bottom: 36px;
+      font-size: 1.05rem;
+      color: var(--juno-text-sub);
+      text-align: center;
+      line-height: 1.9;
+    }
+    .symptom-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      max-width: 840px;
+      margin-inline: auto;
+    }
+    .symptom-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--juno-white);
+      border-radius: 10px;
+      padding: 14px 16px;
+      box-shadow: var(--juno-shadow);
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    .symptom-item__check {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      background: var(--juno-primary);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    .concern-banner {
+      max-width: 840px;
+      margin: 28px auto 0;
+      background: linear-gradient(135deg, rgba(10,186,181,0.10), rgba(10,186,181,0.03));
+      border: 2px solid var(--juno-primary);
+      border-radius: 16px;
+      padding: 28px 36px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .concern-banner__icon { font-size: 2.2rem; flex-shrink: 0; line-height: 1; }
+    .concern-banner__title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--juno-primary-dark);
+      margin-bottom: 8px;
+    }
+    .concern-banner__text {
+      font-size: 0.875rem;
+      color: var(--juno-text-sub);
+      line-height: 1.9;
+    }
+    .target-reassure {
+      max-width: 840px;
+      margin: 28px auto 0;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--juno-primary-dark);
+      background: var(--juno-white);
+      border-radius: 12px;
+      padding: 20px 28px;
+      box-shadow: var(--juno-shadow);
+      border-top: 3px solid var(--juno-primary);
+    }
+
+    /* ===== Section 2: Junoでできること ===== */
+    .scheme-steps {
+      display: flex;
+      align-items: stretch;
+      max-width: 900px;
+      margin: 48px auto 0;
+    }
+    .scheme-step {
+      flex: 1;
+      background: var(--juno-white);
+      border-radius: var(--radius-card);
+      padding: 28px 20px;
+      box-shadow: var(--juno-shadow);
+      text-align: center;
+    }
+    .scheme-arrow {
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      color: var(--juno-primary);
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .scheme-step__num {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--juno-primary);
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+    }
+    .scheme-step__label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--juno-primary);
+      background: var(--juno-primary-light);
+      border-radius: 20px;
+      padding: 4px 12px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .scheme-step__title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+    .scheme-step__text {
+      font-size: 0.78rem;
+      color: var(--juno-text-sub);
+      line-height: 1.8;
+    }
+    .can-do-list {
+      max-width: 840px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .can-do-item {
+      background: var(--juno-white);
+      border-radius: var(--radius-card);
+      padding: 22px 24px;
+      box-shadow: var(--juno-shadow);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .can-do-item__icon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      background: var(--juno-primary-light);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--juno-primary);
+      font-size: 1.3rem;
+    }
+    .can-do-item__title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    .can-do-item__text {
+      font-size: 0.8rem;
+      color: var(--juno-text-sub);
+      line-height: 1.8;
+    }
+    .info-share-box {
+      max-width: 840px;
+      margin: 36px auto 0;
+      background: linear-gradient(135deg, rgba(10,186,181,0.08), rgba(10,186,181,0.02));
+      border-radius: 16px;
+      border: 1.5px solid rgba(10,186,181,0.28);
+      padding: 36px;
+    }
+    .info-share-box__title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--juno-primary-dark);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    /* Hub-spoke ネットワーク図 */
+    .info-share-network { display: flex; justify-content: center; }
+    .hub-spoke-layout { display: flex; flex-direction: column; align-items: center; }
+    .hub-spoke-top { display: flex; flex-direction: column; align-items: center; }
+    .hub-spoke-middle { display: flex; align-items: center; }
+    .hub-vline { width: 2px; height: 28px; background: var(--juno-primary); opacity: 0.4; }
+    .hub-hline {
+      width: 36px; height: 2px;
+      background: var(--juno-primary); opacity: 0.4;
+      flex-shrink: 0;
+    }
+    .info-share-node {
+      background: var(--juno-white);
+      border: 2px solid var(--juno-primary);
+      border-radius: 12px;
+      padding: 12px 20px;
+      text-align: center;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--juno-primary-dark);
+      box-shadow: var(--juno-shadow);
+      min-width: 100px;
+      white-space: nowrap;
+    }
+    .info-share-node--center {
+      background: var(--juno-primary);
+      color: white;
+      border-color: var(--juno-primary);
+      font-size: 0.92rem;
+      padding: 16px 28px;
+      border-radius: 14px;
+      min-width: 120px;
+    }
+    .info-share-box__outcomes {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    .outcome-tag {
+      background: var(--juno-primary);
+      color: white;
+      border-radius: 20px;
+      padding: 6px 18px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .info-share-box__note {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--juno-text-sub);
+      margin-top: 16px;
+      line-height: 1.8;
+    }
+
+    /* ===== Section 3: いまここシート ===== */
+    .imahere-card {
+      max-width: 840px;
+      margin-inline: auto;
+      background: var(--juno-white);
+      border-radius: var(--radius-card);
+      padding: 40px 48px;
+      box-shadow: var(--juno-shadow);
+    }
+    .imahere-card__title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--juno-primary-dark);
+      margin-bottom: 14px;
+    }
+    .imahere-card__text {
+      font-size: 0.9rem;
+      color: var(--juno-text-sub);
+      line-height: 1.9;
+      margin-bottom: 24px;
+    }
+    .imahere-card__domains {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+    .domain-tag {
+      background: var(--juno-primary-light);
+      color: var(--juno-primary-dark);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    /* ===== Section 4: 対象・費用・エリア ===== */
+    .target-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .target-card {
+      background: var(--juno-white);
+      border-radius: var(--radius-card);
+      padding: 28px;
+      box-shadow: var(--juno-shadow);
+    }
+    .target-card__label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--juno-primary);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .target-card__title { font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+    .target-card__text { font-size: 0.875rem; color: var(--juno-text-sub); line-height: 1.8; }
+
+    /* ===== Section 6: 利用者の声 ===== */
+    .voice-badge {
+      display: inline-block;
+      background: var(--juno-primary);
+      color: white;
+      border-radius: 20px;
+      padding: 6px 22px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+    .voice-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 960px;
+      margin-inline: auto;
+    }
+    .voice-card {
+      background: var(--juno-white);
+      border-radius: var(--radius-card);
+      padding: 30px 28px;
+      box-shadow: var(--juno-shadow);
+      border-left: 4px solid var(--juno-primary);
+      display: flex;
+      flex-direction: column;
+    }
+    .voice-card__label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--juno-primary);
+      background: var(--juno-primary-light);
+      display: inline-block;
+      padding: 3px 12px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+    .voice-card__text {
+      font-size: 0.9rem;
+      line-height: 1.9;
+      color: var(--juno-text);
+      flex: 1;
+      margin-bottom: 16px;
+    }
+    .voice-card__author {
+      font-size: 0.8rem;
+      color: var(--juno-text-sub);
+      font-weight: 700;
+    }
+
+    /* ===== 写真・イラスト ===== */
+    /* ブロブ形状フレーム（SVG clipPath使用 / ヒーローとは異なるパス） */
+    .svc-photo {
+      clip-path: url(#svcPhotoClip);
+      filter: drop-shadow(0 12px 32px rgba(10,186,181,0.20));
+      flex-shrink: 0;
+    }
+    .svc-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .svc-photo:hover img { transform: scale(1.04); }
+
+    /* Section 1: ヘッダー2カラム分割 */
+    .svc-header-split {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 48px;
+      align-items: center;
+      max-width: 960px;
+      margin-inline: auto;
+      margin-bottom: 40px;
+    }
+
+    /* Section 2: 写真2枚ストリップ */
+    .svc-photo-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 840px;
+      margin: 36px auto;
+    }
+    .svc-photo-strip .svc-photo { height: 210px; }
+
+    /* Section 3: いまここカード内写真 */
+    .imahere-card-inner {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 36px;
+      align-items: center;
+    }
+    /* いまここ写真は角丸長方形（ブロブ無効化） */
+    .imahere-card__photo {
+      height: 340px;
+      width: 200px;
+      clip-path: none !important;
+      filter: none !important;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 28px rgba(10,186,181,0.16);
+      flex-shrink: 0;
+    }
+    .imahere-card__photo img { object-position: center top; }
+
+    /* Section 2: 写真1枚センター */
+    .svc-single-photo {
+      max-width: 520px;
+      height: 240px;
+      margin: 36px auto;
+    }
+
+    /* Section 6: 利用者の声 イラスト+ラベル横並び */
+    .voice-card__header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .voice-card__illust {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .voice-card__label { margin-bottom: 0; }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .svc-header-split { grid-template-columns: 1fr; gap: 28px; }
+      .svc-header-split .svc-photo { height: 220px; order: -1; max-width: 280px; margin-inline: auto; }
+      .svc-single-photo { height: 200px; max-width: 100%; }
+      .imahere-card-inner { grid-template-columns: 1fr; }
+      .imahere-card__photo { height: 220px; width: 100%; max-width: 240px; margin-inline: auto; }
+      .symptom-grid { grid-template-columns: repeat(2, 1fr); }
+      .concern-banner { flex-direction: column; gap: 10px; padding: 22px 22px; }
+      .scheme-steps { flex-direction: column; gap: 16px; }
+      .scheme-arrow { transform: rotate(90deg); align-self: center; }
+      .can-do-list { grid-template-columns: 1fr; }
+      .imahere-card { padding: 28px 24px; }
+      .target-grid { grid-template-columns: 1fr; }
+      .voice-grid { grid-template-columns: 1fr; }
+      .hub-spoke-middle { flex-direction: column; }
+      .hub-hline { width: 2px; height: 28px; }
+      .info-share-node { white-space: normal; }
+      .info-share-box { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 事業内容ページ用 写真クリップパス（ヒーローとは異なるブロブ形状） -->
+<svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true">
+  <defs>
+    <clipPath id="svcPhotoClip" clipPathUnits="objectBoundingBox">
+      <path d="M 0.10,0.06 C 0.28,-0.04 0.72,-0.04 0.90,0.08 C 1.06,0.18 1.00,0.56 0.94,0.74 C 0.88,0.92 0.68,0.98 0.50,1.00 C 0.32,1.02 0.14,1.06 0.06,0.90 C -0.02,0.74 0.04,0.46 0.06,0.28 C 0.08,0.12 -0.08,0.14 0.10,0.06 Z"/>
+    </clipPath>
+  </defs>
+</svg>
+
+<!-- ナビゲーション -->
+<nav class="nav" role="navigation" aria-label="メインナビゲーション">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="Junoトップページへ">
+      <img src="logo.png" alt="こども訪問看護ステーションJuno" class="nav__logo-img">
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="about.html"   class="nav__link">私たちについて</a></li>
+      <li><a href="service.html" class="nav__link" aria-current="page">事業内容</a></li>
+      <li><a href="faq.html"     class="nav__link">FAQ</a></li>
+      <li><a href="news.html"    class="nav__link">新着情報</a></li>
+      <li><a href="recruit.html" class="nav__link">採用</a></li>
+      <li><a href="contact.html" class="btn btn--primary nav__cta">お問い合わせ</a></li>
+    </ul>
+    <button class="nav__hamburger" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav__mobile" role="menu">
+    <a href="about.html"   class="nav__link" role="menuitem">私たちについて</a>
+    <a href="service.html" class="nav__link" role="menuitem">事業内容</a>
+    <a href="faq.html"     class="nav__link" role="menuitem">FAQ</a>
+    <a href="news.html"    class="nav__link" role="menuitem">新着情報</a>
+    <a href="recruit.html" class="nav__link" role="menuitem">採用</a>
+    <a href="contact.html" class="btn btn--primary" role="menuitem">お問い合わせ</a>
+  </div>
+</nav>
+
+<!-- ページヘッダー -->
+<header class="page-header">
+  <svg class="page-header__blob" viewBox="0 0 1200 240" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="1100" cy="-30" r="180" fill="rgba(255,255,255,0.07)"/>
+    <circle cx="1050" cy="60"  r="100" fill="rgba(255,255,255,0.06)"/>
+    <circle cx="80"  cy="260" r="140" fill="rgba(255,255,255,0.06)"/>
+    <circle cx="160" cy="220" r="70"  fill="rgba(255,255,255,0.05)"/>
+    <circle cx="320" cy="40"  r="18" fill="rgba(255,255,255,0.12)"/>
+    <circle cx="560" cy="20"  r="10" fill="rgba(255,255,255,0.15)"/>
+    <circle cx="780" cy="55"  r="14" fill="rgba(255,255,255,0.10)"/>
+    <circle cx="960" cy="30"  r="8"  fill="rgba(255,255,255,0.18)"/>
+    <circle cx="430" cy="190" r="12" fill="rgba(255,255,255,0.10)"/>
+    <circle cx="700" cy="180" r="20" fill="rgba(255,255,255,0.07)"/>
+    <path d="M200,50 C200,44 206,38 213,42 C220,38 226,44 226,50 C226,58 213,68 213,68 C213,68 200,58 200,50Z" fill="rgba(255,255,255,0.15)"/>
+    <path d="M850,25 C850,20 855,15 861,18 C867,15 872,20 872,25 C872,32 861,40 861,40 C861,40 850,32 850,25Z" fill="rgba(255,255,255,0.12)"/>
+    <path d="M480,80 L520,65 L500,85Z" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <path d="M480,80 L520,65 L505,75Z" fill="rgba(255,255,255,0.10)"/>
+    <path d="M485,78 Q510,60 540,55" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <path d="M0,195 Q150,170 300,188 Q450,206 600,185 Q750,164 900,182 Q1050,200 1200,178 L1200,240 L0,240Z" fill="rgba(255,255,255,0.10)"/>
+    <path d="M0,215 Q200,195 400,210 Q600,225 800,205 Q1000,185 1200,208 L1200,240 L0,240Z" fill="rgba(255,255,255,0.07)"/>
+  </svg>
+  <div class="container">
+    <p class="page-header__sub">Service</p>
+    <h1 class="page-header__title">事業内容・サービス</h1>
+  </div>
+</header>
+
+<!-- ① こんなお子さま・ご家族へ -->
+<section class="section section--alt" id="target">
+  <div class="container">
+    <div class="svc-header-split animate-on-scroll">
+      <div>
+        <div class="section__label" style="margin-inline:0;text-align:left;">For You</div>
+        <h2 class="section__title" style="text-align:left;">こんなお子さま・ご家族へ</h2>
+        <p class="symptom-intro" style="text-align:left;margin-inline:0;margin-bottom:0;margin-top:16px;">
+          お子さまの「育ちのつまづき」を、専門的な視点から整理し、成長を支援します。<br>
+          どれか一つでも当てはまれば、まずはお気軽にご相談ください。
+        </p>
+      </div>
+      <div class="svc-photo" style="height:340px;">
+        <img src="webサイト用画像/事業内容用/親子写真3.png" alt="子どもに向き合う保護者" loading="lazy" style="object-position: 72% center;">
+      </div>
+    </div>
+
+    <div class="symptom-grid animate-on-scroll">
+      <div class="symptom-item">
+        <div class="symptom-item__check" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        言葉がなかなか出てこない
+      </div>
+      <div class="symptom-item">
+        <div class="symptom-item__check" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        コミュニケーションが難しい
+      </div>
+      <div class="symptom-item">
+        <div class="symptom-item__check" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        成長がゆっくりに感じる
+      </div>
+      <div class="symptom-item">
+        <div class="symptom-item__check" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        落ち着きがない・多動
+      </div>
+      <div class="symptom-item">
+        <div class="symptom-item__check" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        園・学校へ行きしぶる
+      </div>
+      <div class="symptom-item">
+        <div class="symptom-item__check" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        集団生活がつらそう
+      </div>
+      <div class="symptom-item">
+        <div class="symptom-item__check" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        運動が苦手・体の使い方がぎこちない
+      </div>
+      <div class="symptom-item">
+        <div class="symptom-item__check" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        不登校・生活上の困りごとがある
+      </div>
+      <div class="symptom-item">
+        <div class="symptom-item__check" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        発達が少し気になる段階でもOK
+      </div>
+    </div>
+
+    <!-- どこに相談したら良いかわからない -->
+    <div class="concern-banner animate-on-scroll">
+      <div class="concern-banner__icon" aria-hidden="true">💬</div>
+      <div>
+        <p class="concern-banner__title">「どこに相談したらいいかわからない」そんなご家族へ</p>
+        <p class="concern-banner__text">
+          診断がついていない、まだグレーゾーンかもしれない、どこに相談すればいいかわからない——<br>
+          そんな段階のご相談こそ、Junoが力になれます。「まず話だけ聞いてみたい」でも大歓迎です。<br>
+          費用はかかりません。一緒に考えていきましょう。
+        </p>
+      </div>
+    </div>
+
+    <div class="target-reassure animate-on-scroll">
+      診断の有無に関わらず、お子さまの成長の状態に応じた支援を大切にしています。
+    </div>
+  </div>
+</section>
+
+<!-- ② Junoの訪問看護でできること -->
+<section class="section" id="what-we-do">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">What We Do</div>
+      <h2 class="section__title">Junoの訪問看護でできること</h2>
+      <p class="section__lead">
+        子どもの成長分野に専門性をもつ看護師がご自宅を訪問し、<br>
+        遊びや感覚への働きかけを通して、お子さまの成長の土台を育てます。
+      </p>
+    </div>
+
+    <!-- 3ステップの支援スキーム -->
+    <div class="scheme-steps animate-on-scroll">
+      <div class="scheme-step">
+        <div class="scheme-step__num">STEP 01</div>
+        <div class="scheme-step__label">準備・関係構築</div>
+        <h3 class="scheme-step__title">お子さまの状態確認と<br>信頼関係の構築</h3>
+        <p class="scheme-step__text">お母さんよりお子さまの状態をお伺いし、また遊び等からお子さまと看護師との信頼関係を築きます</p>
+      </div>
+      <div class="scheme-arrow" aria-hidden="true">▶</div>
+      <div class="scheme-step">
+        <div class="scheme-step__num">STEP 02</div>
+        <div class="scheme-step__label">現状整理・分析</div>
+        <h3 class="scheme-step__title">いまここシートによる<br>多角的な分析</h3>
+        <p class="scheme-step__text">論文・研究ベースの「いまここシート」チェックからお子さまの状態を把握し、課題や改善案を分析します</p>
+      </div>
+      <div class="scheme-arrow" aria-hidden="true">▶</div>
+      <div class="scheme-step">
+        <div class="scheme-step__num">STEP 03</div>
+        <div class="scheme-step__label">訪問開始・成長支援</div>
+        <h3 class="scheme-step__title">分析に基づく訪問と<br>継続的な見直し</h3>
+        <p class="scheme-step__text">分析に基づき訪問を開始、またご家庭での状況を共有し、成長に応じて定期的に課題を見直します</p>
+      </div>
+    </div>
+
+    <!-- できること 4項目 -->
+    <div class="can-do-list animate-on-scroll">
+      <div class="can-do-item">
+        <div class="can-do-item__icon" aria-hidden="true">🏠</div>
+        <div>
+          <p class="can-do-item__title">生活の場でのケア</p>
+          <p class="can-do-item__text">病院ではなく、お子さまが安心できるご自宅へ訪問。慣れた環境だからこそ見える「本来の姿」を大切にします。</p>
+        </div>
+      </div>
+      <div class="can-do-item">
+        <div class="can-do-item__icon" aria-hidden="true">🧩</div>
+        <div>
+          <p class="can-do-item__title">感覚・運動・言語への多角的アプローチ</p>
+          <p class="can-do-item__text">運動・言語・コミュニケーション・生活など複数の分野から相互作用を捉え、一人ひとりに合った支援を提供します。</p>
+        </div>
+      </div>
+      <div class="can-do-item">
+        <div class="can-do-item__icon" aria-hidden="true">👨‍👩‍👧</div>
+        <div>
+          <p class="can-do-item__title">保護者への寄り添いと相談</p>
+          <p class="can-do-item__text">子どもだけでなく、保護者の相談相手にもなります。関わり方のアドバイスを通じて、家族全体が落ち着ける時間を増やします。</p>
+        </div>
+      </div>
+      <div class="can-do-item">
+        <div class="can-do-item__icon" aria-hidden="true">🤝</div>
+        <div>
+          <p class="can-do-item__title">学校・園・支援機関との連携</p>
+          <p class="can-do-item__text">分析情報を視覚的に整理・共有することで、関わるすべての人が同じ方向を向いた包括的支援を実現します。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 写真（1枚センター） -->
+    <div class="svc-single-photo svc-photo animate-on-scroll">
+      <img src="webサイト用画像/事業内容用/子どもあそび写真.png" alt="子どもたちが遊ぶ様子" loading="lazy">
+    </div>
+
+    <!-- 情報共有ネットワーク -->
+    <div class="info-share-box animate-on-scroll">
+      <p class="info-share-box__title">
+        📊 Junoの分析情報を共有することで実現する包括的支援
+      </p>
+      <div class="info-share-network">
+        <div class="hub-spoke-layout">
+          <!-- 上：学校・担任等 -->
+          <div class="hub-spoke-top">
+            <div class="info-share-node">学校・担任等</div>
+            <div class="hub-vline"></div>
+          </div>
+          <!-- 中段：幼稚園・保育園 ─ Juno ─ 支援・療育機関 -->
+          <div class="hub-spoke-middle">
+            <div class="info-share-node">幼稚園・保育園</div>
+            <div class="hub-hline"></div>
+            <div class="info-share-node info-share-node--center">
+              Juno<br>
+              <span style="font-size:0.72rem;font-weight:400;opacity:0.88;">発達支援・分析</span>
+            </div>
+            <div class="hub-hline"></div>
+            <div class="info-share-node">支援・療育機関</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-share-box__outcomes">
+        <div class="outcome-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          包括的な支援体制
+        </div>
+        <div class="outcome-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          関連機関との情報共有
+        </div>
+        <div class="outcome-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          一貫したかかわり
+        </div>
+      </div>
+      <p class="info-share-box__note">
+        「バラバラに相談している感じがする」という声も多くお聞きします。<br>
+        Junoが分析した情報を共有することで、すでにお子さまを支えている機関・支援者との連携がより深まり、支援の効果をさらに高めることができます。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ③ いまここシートとは -->
+<section class="section section--alt" id="imahere">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Assessment</div>
+      <h2 class="section__title">いまここシートとは</h2>
+      <p class="section__lead">Juno独自の、論文・研究ベースの多角的アセスメントツール</p>
+    </div>
+
+    <div class="imahere-card animate-on-scroll">
+      <div class="imahere-card-inner">
+        <div>
+          <h3 class="imahere-card__title">「今できていること」と「これから育てたい力」を、複数の分野から整理・分析します</h3>
+          <p class="imahere-card__text">
+            特定のメソッドに依存せず、運動・言語・コミュニケーションなど複数の領域の相互作用を捉えることで、支援の方向性を明確にします。
+            分析結果は視覚化して共有できるため、保護者・学校・支援機関が共通認識を持った支援が実現します。
+            お子さまのストレスにならない方法でアセスメントを進め、無理のない範囲でお子さまの状態に合わせた支援を行います。
+          </p>
+          <div class="imahere-card__domains" role="list" aria-label="分析する分野">
+            <span class="domain-tag" role="listitem">運動</span>
+            <span class="domain-tag" role="listitem">言語</span>
+            <span class="domain-tag" role="listitem">コミュニケーション</span>
+            <span class="domain-tag" role="listitem">生活</span>
+            <span class="domain-tag" role="listitem">その他</span>
+          </div>
+          <a href="imacoco.html" class="btn btn--primary" style="display:inline-flex;align-items:center;gap:8px;">
+            いまここシートの詳細を見る
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="svc-photo imahere-card__photo">
+          <img src="webサイト用画像/事業内容用/スタッフ中央2.png" alt="分析資料を確認するJunoスタッフ" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ④ 対象・費用・エリア -->
+<section class="section" id="cost">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Details</div>
+      <h2 class="section__title">対象・費用・エリアについて</h2>
+    </div>
+    <div class="target-grid">
+      <div class="target-card animate-on-scroll">
+        <div class="target-card__label">Age</div>
+        <h3 class="target-card__title">対象年齢</h3>
+        <p class="target-card__text">
+          当ステーションをご利用いただくお子さまの対象年齢は、原則下記の通りとなります。<br><br>
+          ・男子：小学6年まで（訪問期間は中学3年まで）<br>
+          ・女子：中学3年生まで（訪問期間は高校3年生まで）
+        </p>
+      </div>
+      <div class="target-card animate-on-scroll">
+        <div class="target-card__label">Condition</div>
+        <h3 class="target-card__title">対象となる症状・特性</h3>
+        <p class="target-card__text">
+          ASD（自閉スペクトラム症）／ADHD（注意欠如多動症）<br>
+          DCD（発達性協調運動症）／知的発達症<br>
+          不登校・生活の困りごと<br>
+          グレーゾーン・発達が気になる段階でもOK<br>
+          <strong style="color:var(--juno-primary-dark);font-size:0.82rem;">※診断の有無は問いません</strong><br>
+          <span style="font-size:0.78rem;color:var(--juno-text-sub);display:block;margin-top:8px;line-height:1.8;">
+            ※ LDのみの症例については対象外となります<br>
+            ※ 多動過多や強い衝動性がある場合、また暴言・暴力が強い場合も対象外となることがあります
+          </span>
+        </p>
+      </div>
+      <div class="target-card animate-on-scroll">
+        <div class="target-card__label">Area</div>
+        <h3 class="target-card__title">対応エリア</h3>
+        <p class="target-card__text">
+          名古屋市緑区・天白区・瑞穂区・東郷町<br>
+          およびその近郊<br><br>
+          エリア外の場合もまずはご相談ください。
+        </p>
+      </div>
+      <div class="target-card animate-on-scroll">
+        <div class="target-card__label">Cost</div>
+        <h3 class="target-card__title">費用・保険適用のため負担ゼロ</h3>
+        <p class="target-card__text">
+          医療保険が適用されるため、名古屋市では高校生まで原則<strong style="color:var(--juno-primary-dark);">費用負担なし</strong>です。<br>
+          1回の訪問時間は30分。医師の訪問看護指示書が必要です（Junoが提携する医療機関をご紹介することも可能です）。<br>
+          詳しくはお問い合わせください。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑤ 支援開始までの流れ -->
+<section class="section section--alt" id="flow">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Flow</div>
+      <h2 class="section__title">支援開始までの流れ</h2>
+      <p class="section__lead">初回面談から訪問開始まで、丁寧にサポートいたします。</p>
+    </div>
+    <div class="card animate-on-scroll" style="max-width:700px;margin-inline:auto;padding:40px;">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-item__dot">1</div>
+          <div>
+            <div class="timeline-item__time">最初のご相談</div>
+            <p class="timeline-item__title">お問い合わせ・ご相談</p>
+            <p class="timeline-item__text">Webフォームまたはお電話でご連絡ください。どんな些細なことでもお気軽にどうぞ。診断の有無・段階は問いません。訪問看護契約へ進む場合、医師の指示書を取得していただきます。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-item__dot">2</div>
+          <div>
+            <div class="timeline-item__time">初回面談</div>
+            <p class="timeline-item__title">初回面談（事務所またはオンライン）</p>
+            <p class="timeline-item__text">お子さまの状況やご希望を詳しくお聞きします。初回面談は事務所へのご来社またはオンラインにてご案内しております。ご都合に合わせてお選びください。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-item__dot">3</div>
+          <div>
+            <div class="timeline-item__time">準備期間〜いまここシートへ</div>
+            <p class="timeline-item__title">準備期間・関係構築からいまここシートの実施へ</p>
+            <p class="timeline-item__text">準備期間としてお母さんよりお子さまのことをお聞きします。その後、関係構築期間を経て、いまここシートによるチェックを開始。お子さまの現在地を多角的に確認し、支援の方向性を整理します。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-item__dot">4</div>
+          <div>
+            <div class="timeline-item__time">通常訪問開始</div>
+            <p class="timeline-item__title">通常訪問開始・継続的な見直し</p>
+            <p class="timeline-item__text">いまここシートや訪問記録、各種情報から分析した内容をもとに、通常訪問を開始。定期的な振り返りと見直しで、成長に合わせた支援を継続します。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥ 利用者の声 -->
+<section class="section" id="voice">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Voice</div>
+      <h2 class="section__title">利用者の声</h2>
+      <p class="section__lead">実際にJunoをご利用いただいた保護者の方々からのご感想を、匿名・一部抜粋としてご紹介します。</p>
+      <span class="voice-badge">これまで約20,000回以上の訪問を重ねてきました</span>
+    </div>
+
+    <div class="voice-grid">
+      <div class="voice-card animate-on-scroll">
+        <div class="voice-card__header">
+          <img src="webサイト用画像/事業内容用/イラスト3.png" alt="" class="voice-card__illust" aria-hidden="true" loading="lazy">
+          <span class="voice-card__label">3歳・ことばのやり取りが気になっていた</span>
+        </div>
+        <p class="voice-card__text">
+          言葉が増えず、おうむ返しはできても会話が難しい状態でした。園でも友だちと遊ぶ様子がなく不安でした。訪問が始まり、少しずつ反応が変わってきました。言葉が増え、目を合わせてやり取りできるなど、安心して見守れる時間が増えました。
+        </p>
+        <p class="voice-card__author">保護者（母）</p>
+      </div>
+      <div class="voice-card animate-on-scroll">
+        <div class="voice-card__header">
+          <img src="webサイト用画像/事業内容用/イラスト4.png" alt="" class="voice-card__illust" aria-hidden="true" loading="lazy">
+          <span class="voice-card__label">幼稚園・園や外で声が出にくかった</span>
+        </div>
+        <p class="voice-card__text">
+          家では話せても、園や外では緊張で声が出なくなるなど悩んでいました。訪問では、無理に話させることはせず、安心できる環境で関わってくれたので、少しずつ家族以外の人にも反応したり、外でもいろんな人と短い会話ができるようになりました。
+        </p>
+        <p class="voice-card__author">保護者（母）</p>
+      </div>
+      <div class="voice-card animate-on-scroll">
+        <div class="voice-card__header">
+          <img src="webサイト用画像/事業内容用/イラスト5.png" alt="" class="voice-card__illust" aria-hidden="true" loading="lazy">
+          <span class="voice-card__label">小学生・学習や姿勢のことで悩んでいた</span>
+        </div>
+        <p class="voice-card__text">
+          小学校から板書が難しく、宿題や忘れ物での注意が増えました。姿勢も安定せず、気持ちの切り替えが難しかったですが、訪問を通して体の使い方や遊びの関わりを続けてもらい、集中できる時間が増えました。最近は一人で机に向かう時間も増えました。
+        </p>
+        <p class="voice-card__author">保護者（母）</p>
+      </div>
+      <div class="voice-card animate-on-scroll">
+        <div class="voice-card__header">
+          <img src="webサイト用画像/事業内容用/イラスト6.png" alt="" class="voice-card__illust" aria-hidden="true" loading="lazy">
+          <span class="voice-card__label">小学生・子どもと向き合う中で悩んでいた</span>
+        </div>
+        <p class="voice-card__text">
+          かんしゃくが多く、年齢の割にできることが少ないという悩みも、相談先がわからず、また母親が頑張りすぎて心配でした。訪問では子どもだけでなく親の相談相手にもなってもらえ、関わり方のアドバイスもあり家族でも落ち着いた時間が増えました。
+        </p>
+        <p class="voice-card__author">保護者（父）</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section--cta">
+  <div class="container">
+    <div class="section__label" style="background:rgba(255,255,255,0.2);color:#fff;">Contact</div>
+    <h2 class="section__title" style="margin-top:12px;">まずはお気軽にご相談ください</h2>
+    <p class="section__lead" style="color:rgba(255,255,255,0.85);margin-inline:auto;margin-bottom:40px;">見学・相談は無料です。診断の有無も問いません。</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="contact.html" class="btn btn--white">無料で相談する</a>
+      <a href="faq.html" class="btn btn--outline-white">よくある質問を見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- フッター -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <img src="logo.png" alt="こども訪問看護ステーションJuno" class="footer__logo-img" loading="lazy">
+        <div class="footer__info">
+          〒458-0007 名古屋市緑区篭山2丁目104<br>神谷ビル2階A<br>
+          TEL: 052-627-3959 ／ FAX: 052-627-3960<br>
+          受付：8:30〜17:30（土日定休）<br>
+          対応エリア：名古屋市緑区・天白区・瑞穂区・東郷町
+        </div>
+        <div class="footer__sns">
+          <a href="https://note.com/junobranch" target="_blank" rel="noopener noreferrer" class="footer__sns-link" aria-label="noteを見る">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/juno_kango_hattatsu_nagoya?igsh=aDZpNTRiOXg5anJn&utm_source=qr" target="_blank" rel="noopener noreferrer" class="footer__sns-link" aria-label="Instagramを見る">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="footer__heading">サイトマップ</p>
+        <nav class="footer__nav" aria-label="フッターナビゲーション">
+          <a href="about.html">私たちについて</a>
+          <a href="service.html">事業内容・サービス</a>
+          <a href="faq.html">よくあるご質問</a>
+          <a href="news.html">新着情報</a>
+          <a href="recruit.html">採用情報</a>
+          <a href="contact.html">お問い合わせ</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer__heading">お問い合わせ</p>
+        <div class="footer__info">
+          <a href="mailto:hello@junochild.com" style="color:inherit;">hello@junochild.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 株式会社Juno Branch. All rights reserved.</p>
+      <p class="footer__copy">運営：株式会社Juno Branch</p>
+    </div>
+  </div>
+</footer>
+
+<!-- フローティングCTA -->
+<div class="floating-cta">
+  <a href="https://forms.gle/hnKDimt3xWUCR43N7" target="_blank" rel="noopener noreferrer" class="floating-cta__btn" aria-label="相談してみる">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    相談してみる
+  </a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

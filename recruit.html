@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>採用情報 | こども訪問看護ステーションJuno</title>
+  <meta name="description" content="訪問看護未経験歓迎。こども訪問看護ステーションJunoでは、小児・児童精神特化型の訪問看護師（正社員・非常勤）を名古屋市緑区にて募集中。カジュアル面談随時受付。">
+  <link rel="canonical" href="https://junochild.com/recruit.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="webサイト用画像/ファビコン.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── Recruit-page styles ── */
+
+    .recruit-tagline {
+      font-size: clamp(1.45rem, 4vw, 2.1rem);
+      font-weight: 700;
+      color: var(--juno-text);
+      line-height: 1.65;
+      margin-bottom: 22px;
+    }
+    .recruit-tagline em { font-style: normal; color: var(--juno-primary); }
+    .recruit-intro {
+      font-size: 0.95rem;
+      line-height: 2.1;
+      color: var(--juno-text-sub);
+      max-width: 700px;
+      margin-inline: auto;
+      margin-bottom: 36px;
+    }
+    .recruit-cta-row {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Strengths */
+    .strength-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+      gap: 18px;
+      margin-top: 40px;
+    }
+    .strength-card {
+      background: var(--juno-white);
+      border-radius: 16px;
+      padding: 28px 18px 24px;
+      text-align: center;
+      box-shadow: var(--juno-shadow);
+      transition: transform 0.2s;
+    }
+    .strength-card:hover { transform: translateY(-3px); }
+    .strength-icon {
+      width: 54px; height: 54px;
+      border-radius: 50%;
+      background: var(--juno-primary-light);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+      color: var(--juno-primary);
+    }
+    .strength-title { font-size: 0.875rem; font-weight: 700; color: var(--juno-text); margin-bottom: 8px; line-height: 1.55; }
+    .strength-desc  { font-size: 0.78rem; color: var(--juno-text-sub); line-height: 1.85; }
+
+    /* PDCA */
+    .pdca-wrap {
+      background: var(--juno-primary-light);
+      border-radius: 20px;
+      padding: 36px 40px;
+      max-width: 840px;
+      margin-inline: auto;
+    }
+    @media (max-width:600px) { .pdca-wrap { padding: 24px 20px; } }
+    .pdca-wrap h3 { font-size: 1.05rem; font-weight: 700; color: var(--juno-primary-dark); margin-bottom: 12px; }
+    .pdca-wrap p  { font-size: 0.9rem; line-height: 2; color: var(--juno-text); }
+    .pdca-stats { display: flex; gap: 20px; margin-top: 28px; flex-wrap: wrap; align-items: stretch; }
+    .pdca-stat {
+      flex: 1; min-width: 130px; text-align: center;
+      background: var(--juno-white); border-radius: 12px; padding: 16px 12px;
+    }
+    .pdca-stat__num   { font-size: 2.2rem; font-weight: 700; color: var(--juno-primary); font-family: 'Nunito', sans-serif; line-height: 1; }
+    .pdca-stat__label { font-size: 0.78rem; color: var(--juno-text-sub); margin-top: 6px; line-height: 1.5; }
+
+    /* Education phases */
+    .edu-phases {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      border: 2px solid var(--juno-primary-light);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-top: 36px;
+    }
+    @media (max-width:640px) { .edu-phases { grid-template-columns: 1fr; } }
+    .edu-phase {
+      padding: 28px 22px;
+      background: var(--juno-white);
+      border-right: 2px solid var(--juno-primary-light);
+    }
+    .edu-phase:last-child { border-right: none; }
+    @media (max-width:640px) {
+      .edu-phase { border-right: none; border-bottom: 2px solid var(--juno-primary-light); }
+      .edu-phase:last-child { border-bottom: none; }
+    }
+    .edu-phase__badge {
+      display: inline-block;
+      background: var(--juno-primary); color: #fff;
+      font-size: 0.7rem; font-weight: 700; font-family: 'Nunito', sans-serif;
+      padding: 3px 12px; border-radius: 99px; margin-bottom: 10px; letter-spacing: 0.05em;
+    }
+    .edu-phase__period { font-size: 0.95rem; font-weight: 700; color: var(--juno-text); margin-bottom: 10px; }
+    .edu-phase__desc   { font-size: 0.82rem; color: var(--juno-text-sub); line-height: 1.9; }
+    .edu-note { font-size: 0.82rem; color: var(--juno-text-sub); background: var(--juno-bg-alt); padding: 14px 18px; border-radius: 8px; line-height: 1.8; margin-top: 20px; }
+
+    /* Family support callout card */
+    .family-card {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      background: var(--juno-white);
+      border-radius: 16px;
+      border-top: 4px solid var(--juno-primary);
+      padding: 24px 28px;
+      box-shadow: var(--juno-shadow);
+      margin-top: 28px;
+    }
+    @media (max-width:560px) { .family-card { flex-direction: column; gap: 12px; } }
+    .family-card__icon {
+      width: 48px; height: 48px; flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--juno-primary-light);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--juno-primary);
+    }
+    .family-card__title {
+      font-size: 0.95rem; font-weight: 700;
+      color: var(--juno-text); margin-bottom: 8px;
+    }
+    .family-card__desc {
+      font-size: 0.875rem; line-height: 1.9;
+      color: var(--juno-text-sub);
+    }
+
+    /* Staff voices */
+    .voice-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-top: 36px;
+    }
+    @media (max-width:720px) { .voice-grid { grid-template-columns: 1fr; } }
+    .voice-card {
+      background: var(--juno-white);
+      border-radius: 16px;
+      padding: 28px 26px 24px;
+      box-shadow: var(--juno-shadow);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .voice-card__photo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    .voice-card__photo {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 3px solid var(--juno-primary-light);
+    }
+    .voice-card__photo-placeholder {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: var(--juno-primary-light);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--juno-primary);
+      flex-shrink: 0;
+    }
+    .voice-card__head { flex: 1; }
+    .voice-card__title {
+      font-size: 0.875rem; font-weight: 700;
+      color: var(--juno-text); line-height: 1.5;
+      margin-bottom: 4px;
+    }
+    .voice-card__meta {
+      font-size: 0.78rem; color: var(--juno-text-sub);
+    }
+    .voice-divider {
+      border: none; border-top: 1px solid var(--juno-bg-alt);
+      margin: 0 0 16px;
+    }
+    .voice-text { font-size: 0.855rem; line-height: 1.95; color: var(--juno-text-sub); flex: 1; }
+
+    /* Day timeline */
+    .day-timeline { max-width: 580px; margin-inline: auto; margin-top: 40px; }
+    .day-item {
+      display: grid;
+      grid-template-columns: 60px 20px 1fr;
+      gap: 0 16px;
+    }
+    .day-item__time {
+      text-align: right; font-size: 0.85rem; font-weight: 700;
+      color: var(--juno-primary); font-family: 'Nunito', sans-serif; padding-top: 3px;
+    }
+    .day-item__rail  { display: flex; flex-direction: column; align-items: center; }
+    .day-item__dot   { width: 12px; height: 12px; border-radius: 50%; background: var(--juno-primary); margin-top: 4px; flex-shrink: 0; }
+    .day-item__line  { width: 2px; flex: 1; background: var(--juno-primary-light); min-height: 28px; }
+    .day-item:last-child .day-item__line { background: transparent; }
+    .day-item__body  { padding-bottom: 24px; }
+    .day-item__title { font-size: 0.9rem; font-weight: 700; color: var(--juno-text); margin-bottom: 3px; }
+    .day-item__desc  { font-size: 0.8rem; color: var(--juno-text-sub); line-height: 1.7; }
+
+    /* Job cards */
+    .job-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 36px;
+    }
+    @media (max-width:680px) { .job-cards { grid-template-columns: 1fr; } }
+    .job-card { border-radius: 16px; overflow: hidden; box-shadow: var(--juno-shadow); }
+    .job-card__head { padding: 22px 24px; color: #fff; }
+    .job-card--full .job-card__head { background: var(--juno-primary); }
+    .job-card--part .job-card__head { background: #4a8c78; }
+    .job-card__type  { font-size: 0.75rem; font-weight: 600; opacity: 0.85; margin-bottom: 4px; font-family: 'Nunito', sans-serif; letter-spacing: 0.05em; }
+    .job-card__title { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
+    .job-card__count { font-size: 0.82rem; opacity: 0.9; }
+    .job-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    .job-table tr:not(:last-child) th,
+    .job-table tr:not(:last-child) td { border-bottom: 1px solid var(--juno-bg-alt); }
+    .job-table th {
+      padding: 11px 14px; text-align: left; font-weight: 700;
+      color: var(--juno-text); background: var(--juno-bg-alt);
+      width: 38%; white-space: nowrap; vertical-align: top;
+    }
+    .job-table td { padding: 11px 14px; color: var(--juno-text-sub); vertical-align: top; line-height: 1.7; }
+
+    /* Common conditions table */
+    .cond-wrap { max-width: 800px; margin-inline: auto; }
+    .cond-section-title {
+      font-size: 0.95rem; font-weight: 700; color: var(--juno-text);
+      margin: 32px 0 12px; padding-bottom: 8px;
+      border-bottom: 2px solid var(--juno-primary-light);
+    }
+    .cond-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+    .cond-table th, .cond-table td {
+      padding: 13px 16px; text-align: left;
+      border-bottom: 1px solid var(--juno-bg-alt);
+      vertical-align: top; line-height: 1.85;
+    }
+    .cond-table th { width: 170px; font-weight: 700; color: var(--juno-text); white-space: nowrap; }
+    .cond-table td { color: var(--juno-text-sub); }
+    @media (max-width:540px) {
+      .cond-table th, .cond-table td { display: block; width: 100%; }
+      .cond-table th { border-bottom: none; padding-bottom: 2px; }
+    }
+
+    /* Office points */
+    .office-points {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+      gap: 22px;
+      margin-top: 32px;
+    }
+    .office-point { display: flex; gap: 14px; align-items: flex-start; }
+    .office-point__icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: var(--juno-primary-light); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--juno-primary);
+    }
+    .office-point__title { font-size: 0.875rem; font-weight: 700; color: var(--juno-text); margin-bottom: 4px; }
+    .office-point__desc  { font-size: 0.8rem; color: var(--juno-text-sub); line-height: 1.75; }
+
+    /* Flow */
+    .flow-steps {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 0;
+      margin-top: 44px;
+      align-items: start;
+    }
+    @media (max-width:680px) { .flow-steps { grid-template-columns: 1fr; } }
+    .flow-step { text-align: center; padding: 0 8px; position: relative; }
+    .flow-step:not(:last-child)::after {
+      content: '\203A';
+      position: absolute; right: -8px; top: 16px;
+      font-size: 1.8rem; color: var(--juno-primary); font-weight: 700;
+    }
+    @media (max-width:680px) {
+      .flow-step { padding: 0 0 36px; }
+      .flow-step:last-child { padding-bottom: 0; }
+      .flow-step:not(:last-child)::after { content: '\2193'; right: auto; left: 50%; top: auto; bottom: 8px; transform: translateX(-50%); font-size: 1.3rem; }
+    }
+    .flow-num {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--juno-primary); color: #fff;
+      font-size: 1.1rem; font-weight: 700; font-family: 'Nunito', sans-serif;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 14px;
+    }
+    .flow-title { font-size: 0.875rem; font-weight: 700; color: var(--juno-text); margin-bottom: 6px; line-height: 1.45; }
+    .flow-desc  { font-size: 0.78rem; color: var(--juno-text-sub); line-height: 1.75; }
+
+    .recruit-note {
+      font-size: 0.82rem; color: var(--juno-text-sub);
+      background: var(--juno-bg-alt); padding: 14px 18px;
+      border-radius: 8px; line-height: 1.8; margin-top: 20px;
+    }
+    .highlight-box {
+      background: var(--juno-primary-light);
+      border-left: 4px solid var(--juno-primary);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+      font-size: 0.875rem; color: var(--juno-primary-dark);
+      font-weight: 600; line-height: 1.85;
+      margin: 20px 0;
+    }
+
+    /* ── Image layouts ── */
+
+    /* Lead 2-col */
+    .recruit-lead-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-top: 36px;
+      text-align: left;
+    }
+    @media (max-width:768px) {
+      .recruit-lead-body { grid-template-columns: 1fr; }
+      .recruit-lead-body .recruit-cta-row { justify-content: flex-start; }
+    }
+    .recruit-lead-img img {
+      width: 100%; display: block;
+      border-radius: 20px;
+      box-shadow: var(--juno-shadow);
+      object-fit: cover;
+    }
+
+    /* PDCA screenshot — pdca-stats の4つ目のflexアイテムとして配置 */
+    .pdca-screenshot {
+      width: 200px; flex-shrink: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      align-self: center;
+    }
+    @media (max-width:680px) { .pdca-screenshot { width: 100%; } }
+    .pdca-screenshot img { width: 100%; display: block; }
+
+    /* Team banner (複数の看護師) */
+    .team-banner {
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 36px;
+      box-shadow: var(--juno-shadow);
+      max-height: 320px;
+    }
+    .team-banner img {
+      width: 100%; display: block;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* Education with tablet image */
+    .edu-with-img {
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 28px;
+      align-items: stretch;
+      margin-top: 24px;
+    }
+    @media (max-width:680px) { .edu-with-img { grid-template-columns: 1fr; } }
+    .edu-tablet-img {
+      border-radius: 16px; overflow: hidden;
+      box-shadow: var(--juno-shadow);
+      height: 100%;
+    }
+    .edu-tablet-img img {
+      width: 100%; height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* Office photo */
+    .office-photo {
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 28px;
+      box-shadow: var(--juno-shadow);
+      max-height: 300px;
+    }
+    .office-photo img { width: 100%; display: block; object-fit: cover; }
+  </style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="メインナビゲーション">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="Junoトップページへ">
+      <img src="logo.png" alt="こども訪問看護ステーションJuno" class="nav__logo-img">
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="about.html"   class="nav__link">私たちについて</a></li>
+      <li><a href="service.html" class="nav__link">事業内容</a></li>
+      <li><a href="faq.html"     class="nav__link">FAQ</a></li>
+      <li><a href="news.html"    class="nav__link">新着情報</a></li>
+      <li><a href="recruit.html" class="nav__link" aria-current="page">採用</a></li>
+      <li><a href="contact.html" class="btn btn--primary nav__cta">お問い合わせ</a></li>
+    </ul>
+    <button class="nav__hamburger" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav__mobile" role="menu">
+    <a href="about.html"   class="nav__link" role="menuitem">私たちについて</a>
+    <a href="service.html" class="nav__link" role="menuitem">事業内容</a>
+    <a href="faq.html"     class="nav__link" role="menuitem">FAQ</a>
+    <a href="news.html"    class="nav__link" role="menuitem">新着情報</a>
+    <a href="recruit.html" class="nav__link" role="menuitem">採用</a>
+    <a href="contact.html" class="btn btn--primary" role="menuitem">お問い合わせ</a>
+  </div>
+</nav>
+
+<header class="page-header">
+  <svg class="page-header__blob" viewBox="0 0 1200 240" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="1100" cy="-30" r="180" fill="rgba(255,255,255,0.07)"/>
+    <circle cx="1050" cy="60"  r="100" fill="rgba(255,255,255,0.06)"/>
+    <circle cx="80"  cy="260" r="140" fill="rgba(255,255,255,0.06)"/>
+    <circle cx="160" cy="220" r="70"  fill="rgba(255,255,255,0.05)"/>
+    <circle cx="320" cy="40"  r="18" fill="rgba(255,255,255,0.12)"/>
+    <circle cx="560" cy="20"  r="10" fill="rgba(255,255,255,0.15)"/>
+    <circle cx="780" cy="55"  r="14" fill="rgba(255,255,255,0.10)"/>
+    <circle cx="960" cy="30"  r="8"  fill="rgba(255,255,255,0.18)"/>
+    <circle cx="430" cy="190" r="12" fill="rgba(255,255,255,0.10)"/>
+    <circle cx="700" cy="180" r="20" fill="rgba(255,255,255,0.07)"/>
+    <path d="M200,50 C200,44 206,38 213,42 C220,38 226,44 226,50 C226,58 213,68 213,68 C213,68 200,58 200,50Z" fill="rgba(255,255,255,0.15)"/>
+    <path d="M850,25 C850,20 855,15 861,18 C867,15 872,20 872,25 C872,32 861,40 861,40 C861,40 850,32 850,25Z" fill="rgba(255,255,255,0.12)"/>
+    <path d="M480,80 L520,65 L500,85Z" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <path d="M480,80 L520,65 L505,75Z" fill="rgba(255,255,255,0.10)"/>
+    <path d="M485,78 Q510,60 540,55" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <path d="M0,195 Q150,170 300,188 Q450,206 600,185 Q750,164 900,182 Q1050,200 1200,178 L1200,240 L0,240Z" fill="rgba(255,255,255,0.10)"/>
+    <path d="M0,215 Q200,195 400,210 Q600,225 800,205 Q1000,185 1200,208 L1200,240 L0,240Z" fill="rgba(255,255,255,0.07)"/>
+  </svg>
+  <div class="container">
+    <p class="page-header__sub">Recruit</p>
+    <h1 class="page-header__title">採用情報</h1>
+  </div>
+</header>
+
+
+<!-- ■ Lead -->
+<section class="section">
+  <div class="container">
+    <div class="section__head animate-on-scroll" style="text-align:center;">
+      <div class="section__label">Recruit</div>
+      <p class="recruit-tagline">子どもと家族に、<em>長く寄り添える</em>しごとへ。</p>
+    </div>
+    <div class="recruit-lead-body animate-on-scroll">
+      <div class="recruit-lead-text">
+        <p class="recruit-intro" style="margin-inline:0;">
+          Junoは0〜15歳のお子さまを対象にした、小児・児童精神特化型の訪問看護ステーションです。スタッフ全員が訪問看護未経験からスタートしており、「子どもに寄り添いたい」という思いがあれば、充実した教育体制と支援データがあなたの訪問をしっかりと支えます。まずは気軽に雰囲気を見に来てください。カジュアル面談（Zoom可）を随時受け付けています。
+        </p>
+        <div class="recruit-cta-row">
+          <a href="contact.html" class="btn btn--primary">カジュアル面談を申し込む</a>
+          <a href="#jobs"        class="btn btn--outline" >募集職種を見る</a>
+        </div>
+      </div>
+      <div class="recruit-lead-img">
+        <img src="webサイト用画像/看護師と子供（アップ）.png" alt="看護師とお子さまのようす" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ■ 5つの強み -->
+<section class="section" style="background:var(--juno-bg-alt);">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Why Juno?</div>
+      <h2 class="section__title">Junoで働く5つの理由</h2>
+    </div>
+
+    <div class="strength-grid">
+
+      <div class="strength-card animate-on-scroll">
+        <div class="strength-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <p class="strength-title">未経験でも大丈夫</p>
+        <p class="strength-desc">在籍スタッフ全員が訪問看護未経験からスタート。病棟・クリニック・NICU・他業種からの転職者が活躍中です。</p>
+      </div>
+
+      <div class="strength-card animate-on-scroll">
+        <div class="strength-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <p class="strength-title">成長を家族と共に喜べる</p>
+        <p class="strength-desc">病棟と違い、同じお子さまと中長期でかかわれます。小さな変化を積み重ね、ご家族と一緒に喜べることがやりがいです。</p>
+      </div>
+
+      <div class="strength-card animate-on-scroll">
+        <div class="strength-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <p class="strength-title">訪問に集中できる体制</p>
+        <p class="strength-desc">記録はスマホ・タブレットで完結。看護計画書・医師報告書の作成は管理スタッフが担当し、事務負担を最小化しています。</p>
+      </div>
+
+      <div class="strength-card animate-on-scroll">
+        <div class="strength-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <p class="strength-title">働きやすさを大切に</p>
+        <p class="strength-desc">残業は月10時間以内、有休消化率80％以上。子育て中スタッフも多く在籍しており、急な休みにも柔軟に対応しています。</p>
+      </div>
+
+      <div class="strength-card animate-on-scroll">
+        <div class="strength-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <p class="strength-title">まずカジュアル面談から</p>
+        <p class="strength-desc">「話だけ聞いてみたい」「職場を見てみたい」という段階でも大歓迎。Zoom面談も可能ですので、気軽にご連絡ください。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ■ Juno PDCA -->
+<section class="section">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Juno PDCA</div>
+      <h2 class="section__title">エビデンスを土台にした支援</h2>
+      <p class="section__lead">経験や勘に頼らず、データと論文に基づいた支援を届けます。</p>
+    </div>
+
+    <div class="pdca-wrap animate-on-scroll">
+      <h3>「Juno PDCA」とは</h3>
+      <p>
+        Junoでは、国内外の学術論文・独自チェック項目・訪問観察データなどを活用し、お子さまの課題と改善アプローチの仮説を整理したうえで訪問します。この仕組みを「Juno PDCA」と呼んでいます。支援の根拠が明確となるため訪問の再現性が高くなり、特定の看護師の経験や感覚だけに依存しません。訪問前に「何を見るか」「どんな関わりが効果的か」が整理されているので、未経験の方でも訪問で迷いが生じにくい環境です。また訪問中に疑問が出たときは「質問箱」として随時相談できるため、一人で抱え込む必要がありません。
+      </p>
+      <div class="pdca-stats">
+        <div class="pdca-stat">
+          <div class="pdca-stat__num">約97%</div>
+          <div class="pdca-stat__label">「看護師との信頼関係が<br>築けている」と回答</div>
+        </div>
+        <div class="pdca-stat">
+          <div class="pdca-stat__num">75%超</div>
+          <div class="pdca-stat__label">「お子さまの改善を<br>感じている」と回答</div>
+        </div>
+        <div class="pdca-stat">
+          <div class="pdca-stat__num">100%</div>
+          <div class="pdca-stat__label">スタッフ全員が<br>訪問看護未経験スタート</div>
+        </div>
+        <div class="pdca-screenshot">
+          <img src="webサイト用画像/チェックシート等/分析サマリー1.png" alt="Juno PDCA 分析サマリーのサンプル" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ■ 教育体制 -->
+<section class="section" style="background:var(--juno-bg-alt);">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Training</div>
+      <h2 class="section__title">充実の教育体制</h2>
+      <p class="section__lead">未経験でも、2〜3か月でおおよその訪問が可能になります。</p>
+    </div>
+
+    <div class="edu-phases animate-on-scroll">
+
+      <div class="edu-phase">
+        <span class="edu-phase__badge">PHASE 01</span>
+        <p class="edu-phase__period">入職〜1か月</p>
+        <p class="edu-phase__desc">
+          法定研修・座学研修からスタート。記録の作成方法、連絡・記録ツール、データベースの使い方を学びます。同行訪問で実際の関わりを見ながら、観察ポイントや遊びの意図を先輩と一緒に振り返ります。
+        </p>
+      </div>
+
+      <div class="edu-phase">
+        <span class="edu-phase__badge">PHASE 02</span>
+        <p class="edu-phase__period">2〜3か月</p>
+        <p class="edu-phase__desc">
+          訪問頻度を徐々に増やし、FAQや遊びのデータベースを活用しながら経験を積みます。迷ったときは「質問箱」で随時相談でき、一人で抱え込まない環境が整っています。
+        </p>
+      </div>
+
+      <div class="edu-phase">
+        <span class="edu-phase__badge">PHASE 03</span>
+        <p class="edu-phase__period">3か月以降〜</p>
+        <p class="edu-phase__desc">
+          自分のペースで訪問できるようになります。毎月の会議では研究論文の共有やケース検討を実施。小児発達支援・児童精神特化型看護のプロフェッショナルを目指せます。
+        </p>
+      </div>
+
+    </div>
+
+    <div class="edu-with-img animate-on-scroll">
+      <div class="family-card" style="margin-top:0;">
+        <div class="family-card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <div>
+          <p class="family-card__title">ご家族へのかかわりも、Junoの大切な柱です</p>
+          <p class="family-card__desc">お子さまの状態だけでなく、保護者のご不安や日常の困りごとにも寄り添いながら、分析データをもとに家庭での関わり方を一緒に考えます。お子さまとご家族の両方に向き合えることが、Junoで働く大きな魅力のひとつです。</p>
+        </div>
+      </div>
+      <div class="edu-tablet-img">
+        <img src="webサイト用画像/タブレット看護師2.png" alt="タブレットで記録する看護師" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ■ スタッフの声 -->
+<section class="section">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Staff Voice</div>
+      <h2 class="section__title">スタッフの声</h2>
+    </div>
+
+    <div class="team-banner animate-on-scroll">
+      <img src="webサイト用画像/スタッフの声上画像.png" alt="Junoのスタッフたち" loading="lazy">
+    </div>
+
+    <div class="voice-grid">
+
+      <!-- 1枚目 -->
+      <div class="voice-card animate-on-scroll">
+        <div class="voice-card__photo-wrap">
+          <img src="webサイト用画像/社員/43.png" alt="スタッフ写真" class="voice-card__photo" loading="lazy">
+          <div class="voice-card__head">
+            <p class="voice-card__title">働きやすい環境で見つけた<br>自分の変化と働く喜び</p>
+          </div>
+        </div>
+        <hr class="voice-divider">
+        <p class="voice-text">
+          Junoはとても働きやすい職場だと感じています。いつでも相談でき、声を掛け合える仲間がいるのでとても安心感があります。自分の悩みやうまくいかない部分も素直に出すことができ、昔からの友人にも「変わったね！」と言われるくらい良い意味でリラックスして働けています。Junoで1年と少し働いていますが、以前とは違い「明日は仕事か、嫌だな」というネガティブな気持ちは全くなくなりました。こんなに働きやすい職場があるんだなあと実感しています。<br><br>
+          初めての訪問先や異なるルートになった時でも不安を感じることはありません。毎日安心して働ける環境で過ごせています。また、継続した訪問の中で、お子さまの成長を感じたり、お母さんの表情が和らいでいく様子を見て、その家庭の雰囲気が良くなっていると実感できる瞬間は本当に嬉しく思います。
+        </p>
+      </div>
+
+      <!-- 2枚目 -->
+      <div class="voice-card animate-on-scroll">
+        <div class="voice-card__photo-wrap">
+          <img src="webサイト用画像/社員/44.png" alt="スタッフ写真" class="voice-card__photo" loading="lazy">
+          <div class="voice-card__head">
+            <p class="voice-card__title">子どもの発達障害特化型<br>ステーションを選んだ理由</p>
+          </div>
+        </div>
+        <hr class="voice-divider">
+        <p class="voice-text">
+          これまでは病棟勤務で内科・外科・小児科など多様な経験をしてきました。特に小児科時代、子どものアレルギーに詳しい教授の影響で、子どもの発達に対する関心が高まりました。病棟では慢性疾患などの長期的な治療を担当し、小児クリニック勤務時代はより細やかなケアを心がけてきました。<br><br>
+          子どもに関わることが好きでここまで歩んできましたが、Junoでは発達障害を持つ子どもたちに寄り添いながら専門的な知識が求められます。新たなチャレンジとして、さらに深く子どもたちの成長に関わっていけることを嬉しく感じています。単に傷が治ったり熱が下がったりするような結果ではなく、中長期的な視点で小さな変化に大きな可能性を見出せるようになりました。他の看護師との相談を通じて新たな発見も得やすく、私自身も一歩ずつ成長していきたいと思っています。
+        </p>
+      </div>
+
+      <!-- 3枚目 -->
+      <div class="voice-card animate-on-scroll">
+        <div class="voice-card__photo-wrap">
+          <img src="webサイト用画像/社員/45.png" alt="スタッフ写真" class="voice-card__photo" loading="lazy">
+          <div class="voice-card__head">
+            <p class="voice-card__title">子どもと家族に寄り添い、<br>成長を一緒に喜べる訪問看護</p>
+          </div>
+        </div>
+        <hr class="voice-divider">
+        <p class="voice-text">
+          以前は小児科の急性期病棟で働いていましたが、患者さんの入れ替わりが激しく、一人ひとりのご家庭にじっくり関わることが難しいと感じていました。保護者の方への指導も短期間では実際にどう定着しているのか確認できないまま終わることも多く、もっと継続的にサポートできる場を求めて転職を決めました。Junoなら訪問を通じてケアやアドバイスが実生活に根づいていく様子を見届けられるし、子どもの成長そのものを一緒に喜べる。そこに大きなやりがいを感じています。<br><br>
+          最初は、子どもやご家族との信頼関係の築き方に難しさを感じることもありましたが、一人ひとりに合った関わり方を探していくことで、少しずつ心を開いてくれる瞬間が増えてきました。入社して5か月が経ち、例えば風船を膨らませられなかった子が自分で膨らませて結べるようにまでなった時など、「ここまで成長できたんだ」と実感できる瞬間が増えてきて、本当に嬉しいです。<br><br>
+          日々の訪問では、観察項目を意識しながら関わるのですが、「できているように見えても、実は鉛筆の持ち方に違和感がある」など、小さな課題が見えてくることもあります。PDCAを回すことで新しい気づきを得られ、仮説を持って訪問に臨めるようになり、お子さまの成長につなげられる実感があります。自分が関わることで子どもたちの発達・成長を少しでも伸ばし、ご家族とのつながりが深まるお手伝いができたら嬉しい。そうした橋渡しの存在でありたいと思っています。
+        </p>
+      </div>
+
+      <!-- 4枚目 -->
+      <div class="voice-card animate-on-scroll">
+        <div class="voice-card__photo-wrap">
+          <img src="webサイト用画像/社員/46.png" alt="スタッフ写真" class="voice-card__photo" loading="lazy">
+          <div class="voice-card__head">
+            <p class="voice-card__title">小さな変化を一緒に喜び、<br>未来につながる存在に</p>
+          </div>
+        </div>
+        <hr class="voice-divider">
+        <p class="voice-text">
+          前職では小児病院の手術室に勤務し、手術を受ける子どもやご家族に寄り添ってきました。そうした経験を通じて、「もっと日常の中で子どもたちに寄り添える看護をしたい」と思うようになり、Junoで働くことを選びました。身近に発達特性のある人がいたことも大きく影響しています。困難さもあるけれど、同時にその人たちならではの魅力や強みもたくさんある。そんな良さを大切にしながら、看護師として力になれたらと思いました。<br><br>
+          実際に働いてみて感じるのは、会社の雰囲気がとても良いこと。先輩にも気軽に相談できるし、毎日の訪問が楽しみです。訪問の場面では、事前に目的を立てて感覚統合遊びを準備しても、その通りに進まないこともあります。そんな時は過去の記録を見直したり、先輩に相談したりしながら工夫しています。子どもにとっては、一緒に過ごす時間やちょっとした会話も社会とのつながりになるので、「無駄な時間はない」と思って関わるようにしています。<br><br>
+          一番のやりがいは子どもの成長を感じられた瞬間です。ルールを守れるようになったり、姿勢が安定してきたり。小さな変化でも、それを一緒に喜べることが本当に嬉しいです。将来、この子たちが大人になって振り返った時に「あの人がいてよかった」と思ってもらえるような存在になりたい。それが、私の想いです。
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ■ 訪問看護師の一日 -->
+<section class="section" style="background:var(--juno-bg-alt);">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">One Day</div>
+      <h2 class="section__title">訪問看護師の一日</h2>
+      <p class="section__lead">常勤看護師のある一日をご紹介します（訪問7件の日のモデルケース）。</p>
+    </div>
+
+    <div class="day-timeline animate-on-scroll">
+
+      <div class="day-item">
+        <span class="day-item__time">8:30</span>
+        <div class="day-item__rail"><div class="day-item__dot"></div><div class="day-item__line"></div></div>
+        <div class="day-item__body">
+          <p class="day-item__title">出勤・当日の訪問確認</p>
+          <p class="day-item__desc">訪問ルートの確認や、データベースから当日訪問予定のお子さま情報を確認。観察ポイントや関わりの方針を整理してから出発します。</p>
+        </div>
+      </div>
+
+      <div class="day-item">
+        <span class="day-item__time">9:30</span>
+        <div class="day-item__rail"><div class="day-item__dot"></div><div class="day-item__line"></div></div>
+        <div class="day-item__body">
+          <p class="day-item__title">午前最初の訪問（社用車で移動）／2件</p>
+          <p class="day-item__desc">遊びを通じた関わりが基本。好きなキャラクターや遊びを活かしながら、様子を観察・記録します。Junoでは兄弟姉妹での利用も多く、この日はご兄弟のお宅を訪問し2件分となります。</p>
+        </div>
+      </div>
+
+      <div class="day-item">
+        <span class="day-item__time">11:00</span>
+        <div class="day-item__rail"><div class="day-item__dot"></div><div class="day-item__line"></div></div>
+        <div class="day-item__body">
+          <p class="day-item__title">午前3件目の訪問（保護者対応）</p>
+          <p class="day-item__desc">お子さまではなく、お母さんへの訪問です。分析結果をもとに、家庭での取り組み状況を共有しながら課題をお聞きし、不明点は質問箱に投稿します。各訪問後はスマホで記録を入力、PC作業は不要です。</p>
+        </div>
+      </div>
+
+      <div class="day-item">
+        <span class="day-item__time">12:00</span>
+        <div class="day-item__rail"><div class="day-item__dot"></div><div class="day-item__line"></div></div>
+        <div class="day-item__body">
+          <p class="day-item__title">昼休憩（60分）</p>
+          <p class="day-item__desc">時間に余裕がある時は事務所に戻ることもあります。周辺にはカフェ・飲食店・コンビニ・スーパーも多く、その日の気分でお昼を過ごせます。</p>
+        </div>
+      </div>
+
+      <div class="day-item">
+        <span class="day-item__time">13:30</span>
+        <div class="day-item__rail"><div class="day-item__dot"></div><div class="day-item__line"></div></div>
+        <div class="day-item__body">
+          <p class="day-item__title">午後最初の訪問／2件</p>
+          <p class="day-item__desc">お子さまの調子に合わせて関わりを調整します。この日はご兄妹2人を訪問。天気も良く、近くの公園へ出かけて体を動かしたり葉っぱを拾ったりしながら、お子さまの様子を確認していきます。</p>
+        </div>
+      </div>
+
+      <div class="day-item">
+        <span class="day-item__time">15:00</span>
+        <div class="day-item__rail"><div class="day-item__dot"></div><div class="day-item__line"></div></div>
+        <div class="day-item__body">
+          <p class="day-item__title">午後3件目の訪問</p>
+          <p class="day-item__desc">保護者からの相談にも応じながら、家庭での関わり方を一緒に考えます。分析で提案した取り組みがうまく進んでいない場合は、お子さまが興味を持って取り組めるような工夫を一緒に考えます。</p>
+        </div>
+      </div>
+
+      <div class="day-item">
+        <span class="day-item__time">16:00</span>
+        <div class="day-item__rail"><div class="day-item__dot"></div><div class="day-item__line"></div></div>
+        <div class="day-item__body">
+          <p class="day-item__title">この日最後の訪問</p>
+          <p class="day-item__desc">学校から戻ってきたお子さまとカードゲームを行います。ゲームを通じて得意な場面・苦手な場面を観察しながら、感情のコントロールなどをポイントとして支援を行います。</p>
+        </div>
+      </div>
+
+      <div class="day-item">
+        <span class="day-item__time">17:00</span>
+        <div class="day-item__rail"><div class="day-item__dot"></div><div class="day-item__line"></div></div>
+        <div class="day-item__body">
+          <p class="day-item__title">記録入力・翌日の準備</p>
+          <p class="day-item__desc">スマホ・タブレットで当日の記録を仕上げます。看護計画書・医師報告書の作成は管理スタッフが担当。訪問内容を記録に整理したり、疑問点を質問箱に投稿したりしながら翌日の準備を行います。</p>
+        </div>
+      </div>
+
+      <div class="day-item">
+        <span class="day-item__time">17:30</span>
+        <div class="day-item__rail"><div class="day-item__dot"></div><div class="day-item__line"></div></div>
+        <div class="day-item__body">
+          <p class="day-item__title">退勤</p>
+          <p class="day-item__desc">毎月の残業は月10時間以内。オンとオフのメリハリをつけながら働けます。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ■ 募集職種 -->
+<section class="section" id="jobs">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Positions</div>
+      <h2 class="section__title">募集職種</h2>
+      <p class="section__lead">正社員・非常勤ともに積極採用中です。まずはカジュアル面談からどうぞ。</p>
+    </div>
+
+    <div class="job-cards animate-on-scroll">
+
+      <!-- 正社員 -->
+      <div class="job-card job-card--full">
+        <div class="job-card__head">
+          <p class="job-card__type">FULL-TIME</p>
+          <p class="job-card__title">正社員（常勤）看護師</p>
+          <p class="job-card__count">募集人数：3〜4名</p>
+        </div>
+        <div class="job-card__body">
+          <table class="job-table">
+            <tr><th>勤務時間</th><td>8:30〜17:30（休憩60分）</td></tr>
+            <tr><th>勤務日</th><td>月〜金・祝日（土日休み）</td></tr>
+            <tr><th>給与</th><td>月給制（基本給＋各種手当）<br>280,000円〜400,000円<br><span style="font-size:0.8rem;">詳細は面談にてご確認ください</span></td></tr>
+            <tr><th>手当</th><td>看護師資格手当 / オンコール手当 / 通勤手当 / 住宅手当（独身者：月3万円）</td></tr>
+            <tr><th>賞与</th><td>あり（入職2年目〜、業績・評価に応じる）</td></tr>
+            <tr><th>残業</th><td>月10時間以内</td></tr>
+            <tr><th>オンコール</th><td>月3回程度（入電：月1〜2回程度、出動なし）</td></tr>
+            <tr><th>移動</th><td>社用車使用（通勤は自家用車可、駐車場無料）</td></tr>
+            <tr><th>保険</th><td>社会保険完備</td></tr>
+            <tr><th>特典</th><td>Netflix無料視聴 / 入職祝い金あり（20万円）</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- 非常勤 -->
+      <div class="job-card job-card--part">
+        <div class="job-card__head">
+          <p class="job-card__type">PART-TIME</p>
+          <p class="job-card__title">非常勤（パート）看護師</p>
+          <p class="job-card__count">募集人数：3名</p>
+        </div>
+        <div class="job-card__body">
+          <table class="job-table">
+            <tr><th>勤務時間</th><td>応相談（週2日から相談可）</td></tr>
+            <tr><th>勤務日</th><td>月〜金・祝日の範囲で応相談（土日休み）</td></tr>
+            <tr><th>給与</th><td>時給1,600円〜<br><span style="font-size:0.8rem;">詳細は面談にてご確認ください</span></td></tr>
+            <tr><th>手当</th><td>通勤手当（条件による）</td></tr>
+            <tr><th>賞与</th><td>なし</td></tr>
+            <tr><th>残業</th><td>原則なし</td></tr>
+            <tr><th>オンコール</th><td>なし</td></tr>
+            <tr><th>移動</th><td>原則社用車使用（場合により自家用車）</td></tr>
+            <tr><th>保険</th><td>条件に応じて加入</td></tr>
+            <tr><th>特典</th><td>入職祝い金あり（勤務日数に応じ8〜10万円）</td></tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="highlight-box animate-on-scroll" style="margin-top:32px;">
+      スマートフォン・タブレットの基本操作（SNSやLINEレベル）ができれば、PCスキルは不要です。訪問看護・小児経験は問いません。「子どもが好き」「家族に寄り添いたい」という思いを大切にしています。
+    </div>
+  </div>
+</section>
+
+
+<!-- ■ 共通の勤務条件・福利厚生 -->
+<section class="section" style="background:var(--juno-bg-alt);">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Benefits</div>
+      <h2 class="section__title">共通の勤務条件・福利厚生</h2>
+    </div>
+
+    <div class="cond-wrap animate-on-scroll">
+
+      <p class="cond-section-title">休暇・両立支援</p>
+      <table class="cond-table">
+        <tr><th>年次有給休暇</th><td>法定通り付与（半日単位での取得も可）。オンライン申請のため取得しやすく、消化率80％以上を達成しています。</td></tr>
+        <tr><th>産前産後休暇</th><td>取得可能</td></tr>
+        <tr><th>育児・介護休業</th><td>取得可能</td></tr>
+        <tr><th>子の看護等休暇</th><td>取得可能</td></tr>
+        <tr><th>短時間勤務</th><td>所定外労働の免除制度あり。「子の看護等休暇制度」として、小学3年修了までのお子さまを養育する方は、個別の勤務調整に配慮しています。</td></tr>
+        <tr><th>急な休み</th><td>子育て中スタッフも多く、チームで柔軟に対応しています。</td></tr>
+      </table>
+
+      <p class="cond-section-title">副業・ダブルワーク</p>
+      <table class="cond-table">
+        <tr><th>副業</th><td>原則可能。ただし開始前に業種・勤務時間帯・雇用形態の申告が必要です。本業に支障が出ない範囲が前提で、利用者情報の流用・漏えいや競合・利益相反に該当する副業は認められません。変更時も再申告が必要です。</td></tr>
+      </table>
+
+      <p class="cond-section-title">身だしなみ</p>
+      <table class="cond-table">
+        <tr><th>基本方針</th><td>利用者・ご家族に安心感と信頼感を持っていただける清潔感を大切にしています。</td></tr>
+        <tr><th>髪型・髪色</th><td>業務に支障のない自然な範囲で可。長い髪は安全面に配慮してまとめることがあります。</td></tr>
+        <tr><th>爪・アクセサリー</th><td>爪は短く清潔に。ネイルやアクセサリーは華美にならない範囲で対応しています。</td></tr>
+        <tr><th>服装</th><td>清潔で動きやすく露出の少ないものが基本。迷う場合は事前相談可能です。</td></tr>
+        <tr><th>ユニフォーム</th><td>支給あり</td></tr>
+      </table>
+
+      <p class="cond-section-title">その他の福利厚生</p>
+      <table class="cond-table">
+        <tr><th>社内紹介制度</th><td>スタッフ紹介による入職者・紹介者の双方に入職祝い金を支給。入職後6か月・双方在籍が条件（面接前までの事前申告が必要）。常勤20万円、非常勤は勤務日数に応じ8〜10万円。</td></tr>
+        <tr><th>Netflix</th><td>常勤正社員は無料視聴可能</td></tr>
+      </table>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ■ 職場環境 -->
+<section class="section">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Office</div>
+      <h2 class="section__title">職場環境</h2>
+      <p class="section__lead">マンションの一室ではなく、明るく広めのオフィスです。</p>
+    </div>
+
+    <div class="office-photo animate-on-scroll">
+      <img src="webサイト用画像/職場環境2.png" alt="Junoのオフィス内部" loading="lazy">
+    </div>
+
+    <div class="office-points">
+
+      <div class="office-point animate-on-scroll">
+        <div class="office-point__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div>
+          <p class="office-point__title">快適なオフィス空間</p>
+          <p class="office-point__desc">ミニキッチン完備。来客用・スタッフ用トイレを個別設置。広めのスペースで落ち着いてお仕事ができます。</p>
+        </div>
+      </div>
+
+      <div class="office-point animate-on-scroll">
+        <div class="office-point__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <p class="office-point__title">利便性の高い立地</p>
+          <p class="office-point__desc">オフィス周辺にはコンビニ・スーパー・カフェ・飲食店が揃い、昼休憩も充実しています。</p>
+        </div>
+      </div>
+
+      <div class="office-point animate-on-scroll">
+        <div class="office-point__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M22 10H2"/></svg>
+        </div>
+        <div>
+          <p class="office-point__title">駐車場完備</p>
+          <p class="office-point__desc">スタッフ用駐車場16台分＋来客用2台を確保。自家用車通勤も可能で、通勤ストレスを軽減できます。</p>
+        </div>
+      </div>
+
+      <div class="office-point animate-on-scroll">
+        <div class="office-point__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <p class="office-point__title">セキュリティ</p>
+          <p class="office-point__desc">暗証番号キーによる入室管理・防犯カメラ・セコム導入済み。安心できる職場環境を整えています。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ■ 応募の流れ -->
+<section class="section" style="background:var(--juno-bg-alt);">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Apply</div>
+      <h2 class="section__title">応募の流れ</h2>
+    </div>
+
+    <div class="flow-steps animate-on-scroll">
+
+      <div class="flow-step">
+        <div class="flow-num">1</div>
+        <p class="flow-title">お問い合わせ・エントリー</p>
+        <p class="flow-desc">問い合わせフォームまたはメールにてご連絡ください。「まず話だけ聞きたい」という段階でも大歓迎です。</p>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-num">2</div>
+        <p class="flow-title">カジュアル面談（任意）</p>
+        <p class="flow-desc">ご希望の方はZoomまたは来社にて実施。仕事内容・教育体制・働き方などを気軽にご確認いただけます。書類不要です。</p>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-num">3</div>
+        <p class="flow-title">面接</p>
+        <p class="flow-desc">日時を調整のうえ実施します。当日は「履歴書」と「看護師資格証」をご持参ください。職場見学も合わせて実施できます。</p>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-num">4</div>
+        <p class="flow-title">内定・入社</p>
+        <p class="flow-desc">入職後は研修・同行訪問からスタート。一緒に新しいチームをつくっていきましょう！</p>
+      </div>
+
+    </div>
+
+    <p class="recruit-note animate-on-scroll">
+      カジュアル面談（書類不要）はZoom・来社どちらでも対応しています。「もう少し詳しく聞いてみたい」「職場の雰囲気が知りたい」という段階でもお気軽にご連絡ください。社内紹介制度（入職祝い金あり）もご活用いただけます。
+    </p>
+
+    <div style="text-align:center;margin-top:40px;" class="animate-on-scroll">
+      <a href="contact.html" class="btn btn--primary" style="font-size:1rem;padding:14px 40px;">採用に関するお問い合わせ・カジュアル面談申し込み</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="section--cta">
+  <div class="container">
+    <div class="section__label" style="background:rgba(255,255,255,0.2);color:#fff;">Recruit</div>
+    <h2 class="section__title" style="margin-top:12px;">子どもと家族と、一緒に歩みませんか</h2>
+    <p class="section__lead" style="color:rgba(255,255,255,0.85);margin-inline:auto;margin-bottom:40px;">カジュアル面談は無料です。Zoom可。まずはお気軽にご連絡ください。</p>
+    <a href="contact.html" class="btn btn--white">採用について問い合わせる</a>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <img src="logo.png" alt="こども訪問看護ステーションJuno" class="footer__logo-img" loading="lazy">
+        <div class="footer__info">
+          〒458-0007 名古屋市緑区篭山2丁目104<br>神谷ビル2階A<br>
+          TEL: 052-627-3959 ／ FAX: 052-627-3960<br>
+          受付：8:30〜17:30（土日定休）<br>
+          対応エリア：名古屋市緑区・天白区・瑞穂区・東郷町
+        </div>
+        <div class="footer__sns">
+          <a href="https://note.com/junobranch" target="_blank" rel="noopener noreferrer" class="footer__sns-link" aria-label="noteを見る">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/juno_kango_hattatsu_nagoya?igsh=aDZpNTRiOXg5anJn&utm_source=qr" target="_blank" rel="noopener noreferrer" class="footer__sns-link" aria-label="Instagramを見る">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="footer__heading">サイトマップ</p>
+        <nav class="footer__nav" aria-label="フッターナビゲーション">
+          <a href="about.html">私たちについて</a>
+          <a href="service.html">事業内容・サービス</a>
+          <a href="faq.html">よくあるご質問</a>
+          <a href="news.html">新着情報</a>
+          <a href="recruit.html">採用情報</a>
+          <a href="contact.html">お問い合わせ</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer__heading">お問い合わせ</p>
+        <div class="footer__info"><a href="mailto:hello@junochild.com" style="color:inherit;">hello@junochild.com</a></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 株式会社Juno Branch. All rights reserved.</p>
+      <p class="footer__copy">運営：株式会社Juno Branch</p>
+    </div>
+  </div>
+</footer>
+
+<div class="floating-cta">
+  <a href="https://forms.gle/hnKDimt3xWUCR43N7" target="_blank" rel="noopener noreferrer" class="floating-cta__btn" aria-label="相談してみる">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    相談してみる
+  </a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
