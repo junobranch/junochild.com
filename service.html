@@ -204,6 +204,11 @@
       background: var(--juno-primary); opacity: 0.4;
       flex-shrink: 0;
     }
+    @media (max-width: 560px) {
+      .hub-spoke-middle { flex-direction: column; align-items: center; }
+      .hub-hline { width: 2px; height: 28px; }
+      .info-share-node { min-width: 160px; }
+    }
     .info-share-node {
       background: var(--juno-white);
       border: 2px solid var(--juno-primary);
