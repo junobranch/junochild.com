@@ -195,6 +195,15 @@
     }
     .voice-text { font-size: 0.855rem; line-height: 1.95; color: var(--juno-text-sub); flex: 1; }
 
+    /* Day video */
+    .day-video { display: flex; justify-content: center; margin-bottom: 40px; }
+    .day-video__player { width: 100%; max-width: 320px; position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.15); cursor: pointer; }
+    .day-video__player::before { content: ''; display: block; padding-top: 177.78%; }
+    .day-video__player iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+    .day-video__thumb { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+    .day-video__play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 72px; height: 72px; background: none; border: none; padding: 0; cursor: pointer; transition: transform 0.2s; }
+    .day-video__play:hover { transform: translate(-50%, -50%) scale(1.1); }
+
     /* Day timeline */
     .day-timeline { max-width: 580px; margin-inline: auto; margin-top: 40px; }
     .day-item {
@@ -728,6 +737,18 @@
       <p class="section__lead">常勤看護師のある一日をご紹介します（訪問7件の日のモデルケース）。</p>
     </div>
 
+    <div class="day-video animate-on-scroll">
+      <div class="day-video__player" id="junoVideoPlayer">
+        <img src="webサイト用画像/訪問看護師の一日_サムネイル.png" alt="訪問看護師の一日" class="day-video__thumb" loading="lazy">
+        <button class="day-video__play" aria-label="動画を再生する" onclick="playJunoVideo()">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="40" fill="rgba(0,0,0,0.55)"/>
+            <polygon points="32,22 62,40 32,58" fill="white"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
     <div class="day-timeline animate-on-scroll">
 
       <div class="day-item">
@@ -1094,5 +1115,11 @@
 </div>
 
 <script src="js/main.js"></script>
+<script>
+function playJunoVideo() {
+  var player = document.getElementById('junoVideoPlayer');
+  player.innerHTML = '<iframe src="https://www.youtube.com/embed/zM16WTLZEVg?autoplay=1" title="訪問看護師の一日 | こども訪問看護ステーションJuno" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"></iframe>';
+}
+</script>
 </body>
 </html>
