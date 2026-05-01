@@ -430,117 +430,41 @@
       <h2 class="section__title">発達障害に関する情報を<br>発信しています</h2>
       <p class="section__lead">スタッフが日々の支援で気づいたことや、発達に関する知識をわかりやすくお届けしています。</p>
     </div>
-    <div id="note-feed" class="note-grid">
-      <p style="text-align:center;color:var(--juno-text-sub);padding:40px 0;grid-column:1/-1;">読み込み中…</p>
+    <div class="note-grid animate-on-scroll">
+
+      <a href="https://note.com/junobranch/n/n210016050c98" target="_blank" rel="noopener noreferrer" class="note-card">
+        <div class="note-card__img note-card__img--empty">
+          <svg width="28" height="28" viewBox="0 0 45 45" fill="#ccc" aria-hidden="true"><path d="M0 4.95C0 2.216 2.217 0 4.95 0h26.663c1.313 0 2.57.521 3.498 1.449l8.44 8.44A4.95 4.95 0 0145 13.387V40.05C45 42.784 42.783 45 40.05 45H4.95C2.217 45 0 42.784 0 40.05V4.95zm30.6-1.65v7.7c0 .91.74 1.65 1.65 1.65h7.7L30.6 3.3zM9.9 14.85a2.475 2.475 0 000 4.95h25.2a2.475 2.475 0 000-4.95H9.9zm0 9.9a2.475 2.475 0 000 4.95H22.5a2.475 2.475 0 000-4.95H9.9z"/></svg>
+        </div>
+        <div class="note-card__body">
+          <p class="note-card__title">研究も応援してるよ！ わが子の「ゆっくり成長」を信じるヒント</p>
+        </div>
+      </a>
+
+      <a href="https://note.com/junobranch/n/n88e63dba6130" target="_blank" rel="noopener noreferrer" class="note-card">
+        <div class="note-card__img note-card__img--empty">
+          <svg width="28" height="28" viewBox="0 0 45 45" fill="#ccc" aria-hidden="true"><path d="M0 4.95C0 2.216 2.217 0 4.95 0h26.663c1.313 0 2.57.521 3.498 1.449l8.44 8.44A4.95 4.95 0 0145 13.387V40.05C45 42.784 42.783 45 40.05 45H4.95C2.217 45 0 42.784 0 40.05V4.95zm30.6-1.65v7.7c0 .91.74 1.65 1.65 1.65h7.7L30.6 3.3zM9.9 14.85a2.475 2.475 0 000 4.95h25.2a2.475 2.475 0 000-4.95H9.9zm0 9.9a2.475 2.475 0 000 4.95H22.5a2.475 2.475 0 000-4.95H9.9z"/></svg>
+        </div>
+        <div class="note-card__body">
+          <p class="note-card__title">お母さんの"新学期" 始めませんか？ 〜お子さまの夏がひと段落する今、自分に向けるケア時間を〜</p>
+        </div>
+      </a>
+
+      <a href="https://note.com/junobranch/n/nc16c51f25e87" target="_blank" rel="noopener noreferrer" class="note-card">
+        <div class="note-card__img note-card__img--empty">
+          <svg width="28" height="28" viewBox="0 0 45 45" fill="#ccc" aria-hidden="true"><path d="M0 4.95C0 2.216 2.217 0 4.95 0h26.663c1.313 0 2.57.521 3.498 1.449l8.44 8.44A4.95 4.95 0 0145 13.387V40.05C45 42.784 42.783 45 40.05 45H4.95C2.217 45 0 42.784 0 40.05V4.95zm30.6-1.65v7.7c0 .91.74 1.65 1.65 1.65h7.7L30.6 3.3zM9.9 14.85a2.475 2.475 0 000 4.95h25.2a2.475 2.475 0 000-4.95H9.9zm0 9.9a2.475 2.475 0 000 4.95H22.5a2.475 2.475 0 000-4.95H9.9z"/></svg>
+        </div>
+        <div class="note-card__body">
+          <p class="note-card__title">アパツの1曲と、2分の余白 〜家の中でできる、無理のない気分転換〜</p>
+        </div>
+      </a>
+
     </div>
-    <div style="text-align:center;margin-top:8px;">
+    <div style="text-align:center;margin-top:8px;" class="animate-on-scroll">
       <a href="https://note.com/junobranch" target="_blank" rel="noopener noreferrer" class="btn btn--outline">もっと見る（note）</a>
     </div>
   </div>
 </section>
-
-<script>
-(function(){
-  var feed = document.getElementById('note-feed');
-  if(!feed) return;
-
-  var RSS_URL  = 'https://note.com/junobranch/rss';
-  var PROXY    = 'https://api.allorigins.win/get?url=' + encodeURIComponent(RSS_URL);
-  var NOTE_ICON = '<svg width="28" height="28" viewBox="0 0 45 45" fill="#ccc" aria-hidden="true"><path d="M0 4.95C0 2.216 2.217 0 4.95 0h26.663c1.313 0 2.57.521 3.498 1.449l8.44 8.44A4.95 4.95 0 0145 13.387V40.05C45 42.784 42.783 45 40.05 45H4.95C2.217 45 0 42.784 0 40.05V4.95zm30.6-1.65v7.7c0 .91.74 1.65 1.65 1.65h7.7L30.6 3.3zM9.9 14.85a2.475 2.475 0 000 4.95h25.2a2.475 2.475 0 000-4.95H9.9zm0 9.9a2.475 2.475 0 000 4.95H22.5a2.475 2.475 0 000-4.95H9.9z"/></svg>';
-
-  function formatDate(str){
-    if(!str) return '';
-    var d = new Date(str);
-    if(isNaN(d)) return '';
-    return d.getFullYear() + '年' + (d.getMonth()+1) + '月' + d.getDate() + '日';
-  }
-
-  function renderCards(xmlStr){
-    var xml   = new DOMParser().parseFromString(xmlStr, 'text/xml');
-    var items = Array.from(xml.querySelectorAll('item')).slice(0, 6);
-    if(!items.length) throw new Error('no items');
-
-    feed.innerHTML = '';
-    items.forEach(function(item){
-      var title = (item.querySelector('title') || {}).textContent || '';
-      var link  = '';
-      /* <link> の値は DOMParser で取れないことがあるため兄弟テキストノードも確認 */
-      var linkEl = item.querySelector('link');
-      if(linkEl){
-        link = linkEl.textContent.trim() || linkEl.nextSibling && linkEl.nextSibling.nodeValue && linkEl.nextSibling.nodeValue.trim() || '';
-      }
-      if(!link){ var guEl = item.querySelector('guid'); if(guEl) link = guEl.textContent.trim(); }
-
-      var pubDate = (item.querySelector('pubDate') || {}).textContent || '';
-      var date    = formatDate(pubDate);
-
-      /* サムネイル取得：enclosure → media:content → media:thumbnail → description内img */
-      var thumb = '';
-      var enc = item.querySelector('enclosure');
-      if(enc && enc.getAttribute('url')) thumb = enc.getAttribute('url');
-      if(!thumb){
-        var ns = ['media:thumbnail','media:content','thumbnail','content'];
-        for(var i=0;i<ns.length;i++){
-          var el = item.getElementsByTagName(ns[i])[0];
-          if(el){
-            /* URLはattributeの場合もあればtextContentの場合もある */
-            thumb = el.getAttribute('url') || el.textContent.trim();
-            if(thumb) break;
-          }
-        }
-      }
-      if(!thumb){
-        var desc = (item.querySelector('description')||{}).textContent || '';
-        var m = desc.match(/https:\/\/assets\.st-note\.com[^"'\s<>]+/);
-        if(m) thumb = m[0];
-      }
-
-      var imgHtml = thumb
-        ? '<div class="note-card__img"><img src="'+thumb+'" alt="" loading="lazy"></div>'
-        : '<div class="note-card__img note-card__img--empty">'+NOTE_ICON+'</div>';
-
-      feed.insertAdjacentHTML('beforeend',
-        '<a href="'+(link||'https://note.com/junobranch')+'" target="_blank" rel="noopener noreferrer" class="note-card">'
-        + imgHtml
-        + '<div class="note-card__body">'
-        + '<p class="note-card__title">'+title+'</p>'
-        + (date ? '<p class="note-card__date">'+date+'</p>' : '')
-        + '</div></a>'
-      );
-    });
-  }
-
-  function showError(){
-    feed.innerHTML = '<p style="text-align:center;color:var(--juno-text-sub);padding:40px 0;grid-column:1/-1;">記事を読み込めませんでした。<a href="https://note.com/junobranch" target="_blank" rel="noopener noreferrer" style="color:var(--juno-primary);">noteで直接ご覧ください</a></p>';
-  }
-
-  /* 複数の手段で順番に試みる */
-  function tryProxies(proxies, index){
-    if(index >= proxies.length){ showError(); return; }
-    var p = proxies[index];
-    fetch(p.url)
-      .then(function(r){
-        if(!r.ok) throw new Error('status '+r.status);
-        return p.json ? r.json() : r.text();
-      })
-      .then(function(data){
-        renderCards(p.json ? data.contents : data);
-      })
-      .catch(function(){ tryProxies(proxies, index+1); });
-  }
-
-  tryProxies([
-    /* ① 直接フェッチ（GitHub Pages等では成功する場合あり） */
-    { url: RSS_URL, json: false },
-    /* ② corsproxy.io（生テキストを返す） */
-    { url: 'https://corsproxy.io/?' + encodeURIComponent(RSS_URL), json: false },
-    /* ③ allorigins.win（JSON {contents}を返す） */
-    { url: 'https://api.allorigins.win/get?url=' + encodeURIComponent(RSS_URL), json: true },
-    /* ④ thingproxy（生テキスト） */
-    { url: 'https://thingproxy.freeboard.io/fetch/' + RSS_URL, json: false }
-  ], 0);
-})();
-</script>
 
 <!-- ⑦ お問い合わせCTA -->
 <section class="section--cta" id="cta">
