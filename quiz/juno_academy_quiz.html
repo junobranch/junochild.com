@@ -559,12 +559,12 @@ const CHAPTERS = {
 /*16*/{q:"対象利用者のいまここシートのチェックがすべて終わったとき、看護師がすることはどれですか。",
       opts:["Slackの『Juno PDCA』チャンネルに完了を連絡する","主治医に電話して、チェック結果を口頭で報告する","点数を自分でGoogleフォームに入力する","その場で結果を保護者に伝え、支援方針を説明する"],
       a:0, exp:"チェックがすべて終わったら、Slackの『Juno PDCA』チャンネルに完了を連絡します（例『◯◯さんの◯回目チェック終了です』）。点数のフォーム投入・分析・資料化は経営企画部が担当します。（4-4）"},
-/*17*/{q:"分析資料（A3）に基づく支援について、原則として正しいものはどれですか。",
+/*17*/{q:"分析資料に基づく支援について、原則として正しいものはどれですか。",
       opts:["半年後の検証のため、原則として資料に基づいて課題対応・改善アプローチを行う","その日の子どもの様子を最優先し、毎回の気づきで関わりを調整する","資料は参考程度にとどめ、看護師ごとのやり方で柔軟に関わる","保護者の要望に合わせて、訪問のたびに目標を見直す"],
       a:0, exp:"半年後に検証するため、原則として分析資料に基づいて関わります。柔軟さは大切ですが、途中で方針を勝手に変えると仮説を検証する意味がなくなります。気になることはSlackで共有し、次の仮説づくりの材料にします。（4-4）"},
-/*18*/{q:"分析資料（A3）の作成・保存について、正しいものはどれですか。",
+/*18*/{q:"分析資料の作成・保存について、正しいものはどれですか。",
       opts:["経営企画部が作成し、Notionの『Juno PDCA』ワークスペースに保存される","訪問した看護師が作成し、保護者に手渡す","主治医が作成し、ステーションに送付する","作成後は紙で各家庭に保管し、データには残さない"],
-      a:0, exp:"登録データは経営企画部が集計・分析し、保護者向けの資料（A3）を作成、Notionの『Juno PDCA』ワークスペースに保存されます。看護師はこれを訪問時に保護者へ説明します。（4-4）"},
+      a:0, exp:"登録データは経営企画部が集計・分析し、保護者向けの資料を作成、Notionの『Juno PDCA』ワークスペースに保存されます。看護師はこれを訪問時に保護者へ説明します。（4-4）"},
 /* 4-5 */
 /*19*/{q:"Junoの訪問記録の入力方法について、正しいものはどれですか。",
       opts:["音声入力で行う","Googleフォームに看護師が入力する（音声入力は行っていない）","手書きの紙のみ","経営企画部が代行する"],
@@ -693,11 +693,18 @@ function startQuiz(key){
   state.emp = emp;
   state.chKey = key;
   state.idx = 0;
-  // 選択肢を毎回シャッフル（正解位置の偏りを防ぐ）
-  state.qs = CHAPTERS[key].questions.map(orig=>{
-    const perm=[0,1,2,3];
-    for(let i=perm.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[perm[i],perm[j]]=[perm[j],perm[i]];}
-    return { q:orig.q, opts:perm.map(p=>orig.opts[p]), a:perm.indexOf(orig.a), exp:orig.exp };
+  // 正解位置を均等配分（ア/イ/ウ/エがほぼ同数になるよう割り当て、偏りを防ぐ）
+  const _qsrc = CHAPTERS[key].questions;
+  const _targets = _qsrc.map((_,i)=>i%4);           // [0,1,2,3,0,1,2,3,...]
+  for(let i=_targets.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[_targets[i],_targets[j]]=[_targets[j],_targets[i]];}
+  state.qs = _qsrc.map((orig,idx)=>{
+    const correct = orig.opts[orig.a];
+    const others = orig.opts.filter((_,k)=>k!==orig.a);
+    for(let i=others.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[others[i],others[j]]=[others[j],others[i]];}
+    const tgt=_targets[idx];                          // この問の正解を置く位置
+    const opts=[]; let oi=0;
+    for(let p=0;p<4;p++){ opts[p] = (p===tgt) ? correct : others[oi++]; }
+    return { q:orig.q, opts, a:tgt, exp:orig.exp };
   });
   state.answers = new Array(state.qs.length).fill(null);
   renderQ();
@@ -808,6 +815,26 @@ function finish(){
   });
 
   show('s-result');
+  // 成績票画像を事前生成（iOSではタップ直後に同期的に共有する必要があるため）
+  prepareReportImage();
+}
+
+/* 成績票画像の事前生成 */
+let _reportBlob=null, _reportFile=null, _reportName='';
+function prepareReportImage(){
+  _reportBlob=null; _reportFile=null;
+  const c=CHAPTERS[state.chKey];
+  _reportName='Juno小テスト_'+c.no+'_社員'+state.emp+'_'+fmtDate().slice(0,10).replace(/\//g,'')+'.png';
+  const btn=document.getElementById('r-save');
+  if(btn){ btn.disabled=true; btn.textContent='画像を準備中…'; }
+  const node=document.getElementById('report-card');
+  html2canvas(node,{backgroundColor:'#ffffff',scale:2,useCORS:true}).then(canvas=>{
+    canvas.toBlob((blob)=>{
+      _reportBlob=blob;
+      if(blob){ try{ _reportFile=new File([blob], _reportName, {type:'image/png'}); }catch(e){ _reportFile=null; } }
+      if(btn){ btn.disabled=false; btn.textContent='📷 成績票を画像で保存'; }
+    },'image/png');
+  }).catch(()=>{ if(btn){ btn.disabled=false; btn.textContent='📷 成績票を画像で保存'; } });
 }
 
 function fmtDate(){
@@ -818,34 +845,28 @@ function fmtDate(){
 
 /* 画像保存（スマホ/タブレットは共有シート経由でカメラロールへ、PC等はダウンロード） */
 document.getElementById('r-save').addEventListener('click', ()=>{
+  // ① 事前生成ファイルがあり共有可能：タップ直後に同期的に共有（iOSの操作有効時間切れを防ぐ）
+  if(_reportFile && navigator.canShare && navigator.canShare({files:[_reportFile]})){
+    navigator.share({files:[_reportFile], title:'Juno小テスト 成績票'}).catch(()=>{});
+    return;
+  }
+  // ② 共有非対応（PC等）：事前生成のBlobをダウンロード
+  if(_reportBlob){
+    const url=URL.createObjectURL(_reportBlob);
+    const link=document.createElement('a'); link.download=_reportName||'Juno小テスト.png'; link.href=url; link.click();
+    URL.revokeObjectURL(url);
+    return;
+  }
+  // ③ まだ準備中／生成失敗：その場で生成してダウンロード（フォールバック）
   const btn=document.getElementById('r-save');
-  const node=document.getElementById('report-card');
-  const c=CHAPTERS[state.chKey];
-  const fname='Juno小テスト_'+c.no+'_社員'+state.emp+'_'+fmtDate().slice(0,10).replace(/\//g,'')+'.png';
-  const reset=()=>{ btn.textContent='📷 成績票を画像で保存'; btn.disabled=false; };
   btn.textContent='画像を生成中…'; btn.disabled=true;
-  html2canvas(node,{backgroundColor:'#ffffff',scale:2,useCORS:true}).then(canvas=>{
-    canvas.toBlob(async (blob)=>{
-      if(!blob){ alert('画像の生成に失敗しました。スクリーンショットで代用してください。'); reset(); return; }
-      const file=new File([blob], fname, {type:'image/png'});
-      // スマホ/タブレット：共有シート → 「画像を保存」でカメラロールへ
-      if(navigator.canShare && navigator.canShare({files:[file]})){
-        try{
-          await navigator.share({files:[file], title:'Juno小テスト 成績票'});
-        }catch(e){ /* ユーザーがキャンセルした場合などは何もしない */ }
-        reset(); return;
-      }
-      // PC等：従来どおりダウンロード保存
-      const url=URL.createObjectURL(blob);
-      const link=document.createElement('a');
-      link.download=fname; link.href=url; link.click();
-      URL.revokeObjectURL(url);
-      reset();
-    }, 'image/png');
-  }).catch(()=>{
-    alert('画像の生成に失敗しました。スクリーンショットで代用してください。');
-    reset();
-  });
+  html2canvas(document.getElementById('report-card'),{backgroundColor:'#ffffff',scale:2,useCORS:true}).then(canvas=>{
+    canvas.toBlob((blob)=>{
+      if(blob){ const url=URL.createObjectURL(blob); const link=document.createElement('a'); link.download=_reportName||'Juno小テスト.png'; link.href=url; link.click(); URL.revokeObjectURL(url); }
+      else alert('画像の生成に失敗しました。スクリーンショットで代用してください。');
+      btn.textContent='📷 成績票を画像で保存'; btn.disabled=false;
+    },'image/png');
+  }).catch(()=>{ alert('画像の生成に失敗しました。スクリーンショットで代用してください。'); btn.textContent='📷 成績票を画像で保存'; btn.disabled=false; });
 });
 
 /* 再挑戦・戻る */
