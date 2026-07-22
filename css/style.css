@@ -558,6 +558,62 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   height: auto;
   filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
 }
+.hero__badge {
+  position: absolute;
+  right: 0;
+  bottom: 110px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.16);
+  padding: 12px 18px;
+  text-align: center;
+  line-height: 1.3;
+  border-top: 3px solid var(--juno-primary);
+  z-index: 10;
+  min-width: 132px;
+}
+.hero__badge-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--juno-primary);
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+.hero__badge-num {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: var(--juno-text);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.hero__badge-unit {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+.hero__badge-date {
+  display: block;
+  font-size: 0.6rem;
+  color: var(--juno-text-sub);
+  margin-top: 5px;
+}
+.difference__inner {
+  max-width: 720px;
+  margin-inline: auto;
+  text-align: center;
+}
+.difference__body {
+  text-align: left;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.difference__body p {
+  line-height: 1.9;
+  color: var(--juno-text);
+}
 .hero__tag {
   display: inline-block;
   background: rgba(255,255,255,0.2);
