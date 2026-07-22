@@ -588,6 +588,19 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   line-height: 1.9;
   color: var(--juno-text);
 }
+.difference__img-wrap {
+  margin-top: 36px;
+  text-align: center;
+}
+.difference__img-wrap img {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+  display: block;
+  margin: 0 auto;
+}
 .hero__tag {
   display: inline-block;
   background: rgba(255,255,255,0.2);
