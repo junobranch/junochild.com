@@ -589,17 +589,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--juno-text);
 }
 .difference__img-wrap {
-  margin-top: 36px;
-  text-align: center;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
 }
 .difference__img-wrap img {
   width: 100%;
-  max-width: 640px;
+  max-width: 600px;
   height: auto;
   border-radius: 14px;
   box-shadow: 0 6px 24px rgba(0,0,0,0.10);
   display: block;
-  margin: 0 auto;
 }
 .hero__tag {
   display: inline-block;
