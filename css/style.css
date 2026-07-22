@@ -560,50 +560,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .hero__badge {
   position: absolute;
-  right: -10px;
-  bottom: 80px;
-  width: 180px;
-  height: 180px;
+  right: -15px;
+  bottom: 65px;
+  width: 170px;
+  height: 170px;
   z-index: 10;
 }
-.hero__badge-svg {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  overflow: visible;
-}
-.hero__badge-inner {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -44%);
-  text-align: center;
-  width: 116px;
-}
-.hero__badge-label {
-  display: block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  color: var(--juno-primary);
-  letter-spacing: 0.08em;
-  margin-bottom: 2px;
-}
-.hero__badge-num {
-  display: block;
-  font-size: 1.65rem;
-  font-weight: 900;
-  color: var(--juno-text);
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-}
-.hero__badge-unit {
-  font-size: 0.88rem;
-  font-weight: 700;
-}
-.hero__badge-date {
-  display: block;
-  font-size: 0.57rem;
-  color: var(--juno-text-sub);
-  margin-top: 3px;
+.hero__badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.16));
 }
 .difference__inner {
   max-width: 720px;
@@ -1393,7 +1360,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .hero__visual-wrap { max-width: 360px; margin-inline: auto; }
   .hero__photo-wrap { max-width: 360px; }
   .hero__mini-illust { max-width: 110px; }
-  .hero__badge { position: relative; right: auto; bottom: auto; margin: 14px auto 0; width: 150px; height: 150px; }
+  .hero__badge { position: absolute; right: 5px; bottom: 95px; width: 120px; height: 120px; }
   .hero__btns { flex-direction: column; }
   .floating-cta { bottom: 20px; right: 16px; }
   .floating-cta__btn { padding: 12px 18px; font-size: 0.875rem; }
