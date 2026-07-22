@@ -560,48 +560,32 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .hero__badge {
   position: absolute;
-  right: -5px;
-  bottom: 95px;
-  background: rgba(255,255,255,0.97);
-  border-radius: 18px;
-  box-shadow: 0 10px 36px rgba(0,0,0,0.18), 0 2px 10px rgba(10,186,181,0.15);
-  padding: 14px 4px 12px;
-  display: flex;
-  align-items: center;
-  gap: 2px;
+  right: -10px;
+  bottom: 80px;
+  width: 180px;
+  height: 180px;
   z-index: 10;
 }
-.hero__badge-branch {
-  flex-shrink: 0;
-  width: 28px;
-  height: auto;
+.hero__badge-svg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: visible;
 }
 .hero__badge-inner {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -44%);
   text-align: center;
-  padding: 0 4px;
-  min-width: 108px;
-}
-.hero__badge-stars {
-  display: block;
-  color: #F4A261;
-  font-size: 0.6rem;
-  letter-spacing: 4px;
-  margin-bottom: 1px;
-}
-.hero__badge-divider {
-  display: block;
-  width: 1px;
-  height: 9px;
-  background: var(--juno-primary);
-  opacity: 0.35;
-  margin: 3px auto;
+  width: 116px;
 }
 .hero__badge-label {
   display: block;
-  font-size: 0.64rem;
+  font-size: 0.68rem;
   font-weight: 700;
   color: var(--juno-primary);
   letter-spacing: 0.08em;
+  margin-bottom: 2px;
 }
 .hero__badge-num {
   display: block;
@@ -619,7 +603,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: block;
   font-size: 0.57rem;
   color: var(--juno-text-sub);
-  margin-top: 2px;
+  margin-top: 3px;
 }
 .difference__inner {
   max-width: 720px;
@@ -1409,6 +1393,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .hero__visual-wrap { max-width: 360px; margin-inline: auto; }
   .hero__photo-wrap { max-width: 360px; }
   .hero__mini-illust { max-width: 110px; }
+  .hero__badge { position: relative; right: auto; bottom: auto; margin: 14px auto 0; width: 150px; height: 150px; }
   .hero__btns { flex-direction: column; }
   .floating-cta { bottom: 20px; right: 16px; }
   .floating-cta__btn { padding: 12px 18px; font-size: 0.875rem; }
