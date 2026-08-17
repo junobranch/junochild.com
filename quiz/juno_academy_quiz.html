@@ -636,9 +636,17 @@ function tryGate(){
   }
 }
 
-/* 合格判定：社員番号別キー＋旧バージョン（社員番号なしキー）も引き継ぐ */
+/* 管理者による手動措置（特定の社員番号のロックを解除）
+   PASS_OVERRIDE：合格済み扱い（「合格済」バッジ＋以降の章を解放）
+   OPEN_OVERRIDE：ロック解除のみ（バッジは付けない）
+   ※不要になったら該当行を削除するだけで元に戻せます */
+const PASS_OVERRIDE = { '047': ['ch2'] };
+const OPEN_OVERRIDE = { '047': ['ch3','ch4'] };
+
+/* 合格判定：手動措置＋社員番号別キー＋旧バージョン（社員番号なしキー）も引き継ぐ */
 function chapterPassed(emp, key){
   if(!emp) return false;
+  if((PASS_OVERRIDE[emp]||[]).indexOf(key)>=0) return true;              // 手動：合格済み扱い
   if(localStorage.getItem('juno_quiz_pass_'+emp+'_'+key)==='1') return true;
   // 旧版（社員番号なし・端末共通キー）で合格していた場合は引き継ぎ、以後は社員番号別で保持
   if(localStorage.getItem('juno_quiz_pass_'+key)==='1'){
@@ -646,6 +654,10 @@ function chapterPassed(emp, key){
     return true;
   }
   return false;
+}
+/* 手動でロック解除する章か（バッジは付けない） */
+function chapterForceOpen(emp, key){
+  return !!emp && (OPEN_OVERRIDE[emp]||[]).indexOf(key)>=0;
 }
 
 /* ② 章リスト生成 */
@@ -665,8 +677,9 @@ function buildChapterList(){
       prevNo=CHAPTERS[prevKey].no;
       locked = !chapterPassed(emp, prevKey);
     }
-    // 合格済みの章は順番ロックに関係なく開放（再受験可）
-    const openable = ready && (!locked || passed);
+    // 合格済みの章、または管理者措置で解除された章は開放（再受験可）
+    const forceOpen = chapterForceOpen(emp, key);
+    const openable = ready && (!locked || passed || forceOpen);
 
     const div = document.createElement('div');
     div.className='ch-item';
@@ -674,11 +687,11 @@ function buildChapterList(){
     div.style.cursor = openable ? 'pointer' : 'not-allowed';
 
     let small = c.desc + (ready ? (' ・'+c.questions.length+'問') : '');
-    if(locked && !passed) small = '🔒 '+prevNo+'に合格すると受けられます';
+    if(locked && !passed && !forceOpen) small = '🔒 '+prevNo+'に合格すると受けられます';
 
     let badge='';
     if(passed) badge='<span class="ch-badge pass">合格済</span>';
-    else if(locked) badge='<span class="ch-badge lock">ロック中</span>';
+    else if(locked && !forceOpen) badge='<span class="ch-badge lock">ロック中</span>';
 
     div.innerHTML =
       '<div class="ch-num">'+c.no+'</div>'+
