@@ -636,6 +636,18 @@ function tryGate(){
   }
 }
 
+/* 合格判定：社員番号別キー＋旧バージョン（社員番号なしキー）も引き継ぐ */
+function chapterPassed(emp, key){
+  if(!emp) return false;
+  if(localStorage.getItem('juno_quiz_pass_'+emp+'_'+key)==='1') return true;
+  // 旧版（社員番号なし・端末共通キー）で合格していた場合は引き継ぎ、以後は社員番号別で保持
+  if(localStorage.getItem('juno_quiz_pass_'+key)==='1'){
+    localStorage.setItem('juno_quiz_pass_'+emp+'_'+key,'1');
+    return true;
+  }
+  return false;
+}
+
 /* ② 章リスト生成 */
 function buildChapterList(){
   const list = document.getElementById('ch-list');
@@ -645,13 +657,13 @@ function buildChapterList(){
   keys.forEach((key, idx)=>{
     const c = CHAPTERS[key];
     const ready = c.questions.length>0;
-    const passed = !!emp && localStorage.getItem('juno_quiz_pass_'+emp+'_'+key)==='1';
+    const passed = chapterPassed(emp, key);
     // 順番ロック：最初の章は常に開放。以降は直前の章に（この社員番号で）合格していれば開放
     let locked=false, prevNo='';
     if(idx>0){
       const prevKey=keys[idx-1];
       prevNo=CHAPTERS[prevKey].no;
-      locked = !(!!emp && localStorage.getItem('juno_quiz_pass_'+emp+'_'+prevKey)==='1');
+      locked = !chapterPassed(emp, prevKey);
     }
     // 合格済みの章は順番ロックに関係なく開放（再受験可）
     const openable = ready && (!locked || passed);
@@ -678,8 +690,8 @@ function buildChapterList(){
   });
 }
 
-// 社員番号を入力・変更したら、その番号の進捗で章リストを再描画
-document.getElementById('emp').addEventListener('input', buildChapterList);
+// 社員番号を入力・変更したら、その番号の進捗で章リストを再描画（自動入力対策で複数イベントを購読）
+['input','change','blur','keyup'].forEach(ev=>document.getElementById('emp').addEventListener(ev, buildChapterList));
 
 /* ② スタート → 設問 */
 function startQuiz(key){
