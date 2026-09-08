@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLCQ40CH33"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-YLCQ40CH33');
-  </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
@@ -648,8 +640,8 @@ function tryGate(){
    PASS_OVERRIDE：合格済み扱い（「合格済」バッジ＋以降の章を解放）
    OPEN_OVERRIDE：ロック解除のみ（バッジは付けない）
    ※不要になったら該当行を削除するだけで元に戻せます */
-const PASS_OVERRIDE = { '047': ['ch2'] };
-const OPEN_OVERRIDE = { '047': ['ch3','ch4'] };
+const PASS_OVERRIDE = { '047': ['ch2'], '022': ['ch2'] };
+const OPEN_OVERRIDE = { '047': ['ch3','ch4'], '022': ['ch3','ch4'] };
 
 /* 合格判定：手動措置＋社員番号別キー＋旧バージョン（社員番号なしキー）も引き継ぐ */
 function chapterPassed(emp, key){
@@ -907,6 +899,5 @@ document.getElementById('r-retry').addEventListener('click', ()=> startQuiz(stat
 document.getElementById('r-home').addEventListener('click', ()=>{ buildChapterList(); show('s-start'); });
 
 </script>
-  <script src="/js/tracking.js"></script>
 </body>
 </html>
