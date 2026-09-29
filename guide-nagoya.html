@@ -297,6 +297,19 @@
       background: var(--juno-primary);
     }
 
+    /* ===== 家庭での関わり（訪問看護という選択肢） ===== */
+    .g-title-sub { display: block; font-size: 0.95rem; font-weight: 500; color: var(--juno-text-sub); margin-top: 8px; }
+    .g-quotes { display: flex; flex-direction: column; gap: 10px; margin: 14px 0 4px; }
+    .g-quote {
+      background: var(--juno-bg-sub);
+      border-left: 3px solid var(--juno-border);
+      border-radius: 0 8px 8px 0;
+      padding: 10px 16px;
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: var(--juno-text);
+    }
+
     /* ===== 相談の順番（Junoの経験から） ===== */
     .g-tips { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
     .g-tip {
@@ -482,6 +495,12 @@
         <div class="g-situation__list">
           <a href="#ku">お住まいの区の区役所（民生子ども課）</a>
           <a href="#sagasu">名古屋市「すてっぷサポート」で事業所を検索</a>
+        </div>
+      </div>
+      <div class="g-situation">
+        <p class="g-situation__title">家庭での関わり方を具体的に相談したい</p>
+        <div class="g-situation__list">
+          <a href="#home-support">発達支援の訪問看護という選択肢</a>
         </div>
       </div>
       <div class="g-situation g-situation--sos">
@@ -748,8 +767,40 @@
   </div>
 </section>
 
+<!-- Section 8.5: 家庭での関わり方（支援形態の説明。Junoの名称・実績は載せない） -->
+<section class="section g-anchor" id="home-support">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Home Support</div>
+      <h2 class="section__title">家庭での関わり方を相談したいとき<span class="g-title-sub">発達支援の訪問看護という選択肢</span></h2>
+    </div>
+
+    <div class="g-body g-orgs animate-on-scroll">
+      <div class="g-org">
+        <p class="g-org__desc" style="margin-top:0;">ここまでご紹介した窓口は、主に「相談に行く」「通う」という形の支援です。</p>
+        <p class="g-org__desc">一方で、こんな声を伺うことがあります。</p>
+        <div class="g-quotes">
+          <p class="g-quote">「予約は取れたけれど、日々の困りごとはどうすればいいのか」</p>
+          <p class="g-quote">「事業所には通っているけれど、家では相変わらず大変」</p>
+          <p class="g-quote">「相談では『様子を見ましょう』と言われるだけで、具体的に何をすればいいのか分からない」</p>
+        </div>
+        <p class="g-org__desc">家庭での日常に関わる支援として、発達支援を行う訪問看護という選択肢があります。</p>
+        <p class="g-org__desc">看護師がご家庭を訪問し、お子さまの普段の様子を見ながら、家庭で無理なく続けられる関わり方を一緒に考えていく支援です。</p>
+        <ul class="g-bullets">
+          <li>医療保険が適用されます</li>
+          <li>利用には主治医の訪問看護指示書が必要です</li>
+          <li>障害福祉サービスの受給者証は不要です</li>
+          <li>児童発達支援や放課後等デイサービスとの併用ができます</li>
+          <li>診断がついていない段階でも利用できる場合があります</li>
+        </ul>
+        <p class="g-org__desc">「通う」のではなく「来てもらう」という形の支援があることを、選択肢のひとつとして知っておいていただければと思います。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Section 9: 相談の順番に迷ったら（Junoの実務経験から） -->
-<section class="section g-anchor" id="junban">
+<section class="section g-anchor" id="junban" style="background:var(--juno-bg);">
   <div class="container">
     <div class="section__head animate-on-scroll">
       <div class="section__label">First Steps</div>
@@ -844,7 +895,7 @@
     <div class="g-about animate-on-scroll">
       <p class="g-about__title">このページについて</p>
       <p>このページは、こども訪問看護ステーションJunoが作成しています。</p>
-      <p>Junoは、名古屋市緑区・天白区・瑞穂区・南区を中心に、名東区・昭和区、愛知郡東郷町にも訪問している、0歳から15歳のお子さまのご自宅へ伺う、発達支援に特化した訪問看護ステーションです。</p>
+      <p>Junoは、先ほどご紹介した「発達支援の訪問看護」を行う事業所のひとつです。名古屋市緑区・天白区・瑞穂区・南区を中心に、名東区・昭和区、愛知郡東郷町にも訪問している、0歳から15歳のお子さまのご自宅へ伺う、発達支援に特化した訪問看護ステーションです。</p>
       <p>診断の有無を問わず、ご家庭での関わり方をご家族と一緒に考えます。医療保険が適用されるため、名古屋市では高校生まで原則費用負担なしでご利用いただけます。訪問開始には主治医の指示書が必要ですが、手続きについてもご相談に応じます。</p>
       <div class="g-about__links">
         <a href="/service.html">事業内容を見る</a>
