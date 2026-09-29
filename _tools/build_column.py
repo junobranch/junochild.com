@@ -261,10 +261,9 @@ for idx, a in enumerate(arts):
             + pager
             + '      <div class="col-links">\n'
             + '        <p><a href="/column/">発達コラム 一覧へ ＞</a></p>\n'
-            + '        <p>お住まいの地域の相談窓口については、こちらにまとめています。<br><a href="/guide-nagoya.html">名古屋市南部・東部 こどもの発達・不登校 相談先ガイド ＞</a></p>\n'
             + '      </div>\n'
             + '      <div class="col-sign"><strong>こども訪問看護ステーションJuno</strong><br>'
-              'このコラムは、訪問看護の現場での経験と、学術文献をもとに作成しています。<br>'
+              'このコラムは、訪問看護の現場での経験・臨床データ蓄積と、学術文献をもとに作成しています。<br>'
               '記載内容は一般的な情報であり、個々のお子さまへの対応を示すものではありません。</div>\n'
             + '    </div>\n  </div>\n</section>\n'
             + TAIL)
