@@ -248,7 +248,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .nav__links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 20px;
 }
 .nav__link {
   font-size: 0.875rem;
@@ -1337,11 +1337,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    レスポンシブ
    ============================================= */
 /* 8項目のPCナビが収まらない幅ではハンバーガーに切り替える */
-@media (max-width: 1080px) {
+@media (max-width: 1100px) {
   .nav__links { display: none; }
   .nav__hamburger { display: flex; }
 }
-@media (min-width: 1081px) {
+@media (min-width: 1101px) {
   .nav__mobile.open { display: none; }
 }
 
