@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLCQ40CH33"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YLCQ40CH33');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>名古屋市南部・東部 こどもの発達・不登校 相談先ガイド | こども訪問看護ステーションJuno</title>
+  <meta name="description" content="名古屋市緑区・天白区・瑞穂区・南区・名東区・昭和区、愛知郡東郷町にお住まいの方向けに、こどもの発達・不登校について相談できる公的な窓口をまとめました。地域療育センターの担当区、不登校の相談先など。">
+  <link rel="canonical" href="https://junochild.com/guide-nagoya.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/webサイト用画像/ファビコン.png">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!--
+    このページの情報は年1回（4月／年度替わり）に全項目を確認してください。
+    公的機関の連絡先・受付時間は変更されることがあります。
+    古い情報を掲載し続けるほうが、掲載しないより有害です。
+    最終確認：2026年9月29日
+  -->
+
+  <style>
+    .g-anchor { scroll-margin-top: calc(var(--nav-height, 72px) + 16px); }
+
+    /* ===== リード ===== */
+    .g-lead {
+      max-width: 760px;
+      margin-inline: auto;
+      font-size: 1rem;
+      line-height: 1.95;
+      color: var(--juno-text-sub);
+    }
+    .g-lead p + p { margin-top: 1.2em; }
+    .g-voices {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+    .g-voice {
+      align-self: flex-start;
+      background: var(--juno-white);
+      border: 1px solid var(--juno-border);
+      border-radius: 18px 18px 18px 4px;
+      padding: 10px 18px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--juno-text);
+    }
+    .g-voice:nth-child(2) { margin-left: 24px; }
+    .g-voice:nth-child(3) { margin-left: 48px; }
+
+    /* ===== 状況別カード ===== */
+    .g-situations {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      max-width: 960px;
+      margin-inline: auto;
+    }
+    .g-situation {
+      background: var(--juno-white);
+      border: 1px solid var(--juno-border);
+      border-radius: 14px;
+      padding: 22px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .g-situation__title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--juno-text);
+      line-height: 1.6;
+    }
+    .g-situation__list { display: flex; flex-direction: column; gap: 8px; }
+    .g-situation__list a {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--juno-primary-dark);
+      line-height: 1.6;
+    }
+    .g-situation__list a::before {
+      content: "";
+      flex: none;
+      width: 7px;
+      height: 7px;
+      margin-top: 0.62em;
+      border-top: 2px solid currentColor;
+      border-right: 2px solid currentColor;
+      transform: rotate(45deg);
+    }
+    .g-situation__list a:hover { text-decoration: underline; }
+    .g-situation__note { font-size: 0.8rem; color: var(--juno-text-sub); line-height: 1.7; margin-left: 15px; margin-top: -4px; }
+    .g-situation--sos { background: var(--juno-primary-light); border-color: transparent; }
+    .g-situation__tel { font-size: 1.15rem; font-weight: 700; color: var(--juno-primary-dark); font-variant-numeric: tabular-nums; }
+    .g-togo-note {
+      max-width: 960px;
+      margin: 20px auto 0;
+      font-size: 0.875rem;
+      color: var(--juno-text-sub);
+      line-height: 1.8;
+    }
+    .g-togo-note a { color: var(--juno-primary-dark); font-weight: 600; border-bottom: 1px solid var(--juno-primary); }
+
+    /* ===== 本文ブロック ===== */
+    .g-body { max-width: 820px; margin-inline: auto; }
+    .g-body > p { font-size: 0.95rem; line-height: 1.95; color: var(--juno-text-sub); }
+    .g-body > p + p { margin-top: 1em; }
+    .g-h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--juno-text);
+      margin: 48px 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--juno-border);
+    }
+
+    /* ===== 担当センター表 ===== */
+    .g-table-wrap { overflow-x: auto; }
+    .g-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--juno-white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--juno-shadow);
+      font-size: 0.9rem;
+    }
+    .g-table th, .g-table td {
+      padding: 16px 18px;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.7;
+      border-bottom: 1px solid var(--juno-border);
+    }
+    .g-table thead th {
+      background: var(--juno-primary-light);
+      color: var(--juno-primary-dark);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+    .g-table tbody tr:last-child td { border-bottom: none; }
+    .g-table__area { font-weight: 700; color: var(--juno-text); white-space: nowrap; }
+    .g-table__name { font-weight: 700; color: var(--juno-text); }
+    .g-table__addr { color: var(--juno-text-sub); font-size: 0.85rem; }
+
+    .g-tel {
+      font-weight: 700;
+      color: var(--juno-primary-dark);
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+      border-bottom: 1px solid var(--juno-primary);
+    }
+
+    /* ===== 利用の流れ ===== */
+    .g-steps { counter-reset: gstep; display: flex; flex-direction: column; gap: 12px; }
+    .g-steps li {
+      counter-increment: gstep;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--juno-text);
+    }
+    .g-steps li::before {
+      content: counter(gstep);
+      flex: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--juno-primary);
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .g-steps-after { margin-top: 14px; font-size: 0.9rem; color: var(--juno-text-sub); line-height: 1.8; }
+
+    .g-text { font-size: 0.95rem; line-height: 1.95; color: var(--juno-text-sub); }
+    .g-text + .g-text { margin-top: 1em; }
+
+    /* ===== 初診の待機（強調枠） ===== */
+    .g-wait {
+      margin-top: 48px;
+      background: var(--juno-primary-light);
+      border: 1px solid var(--juno-border);
+      border-radius: 16px;
+      padding: 28px 32px;
+    }
+    .g-wait__title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--juno-primary-dark);
+      margin-bottom: 14px;
+    }
+    .g-wait p { font-size: 0.95rem; line-height: 1.95; color: var(--juno-text); }
+    .g-wait p + p { margin-top: 0.9em; }
+    .g-wait strong { color: var(--juno-primary-dark); }
+
+    /* ===== 機関カード ===== */
+    .g-orgs { display: flex; flex-direction: column; gap: 20px; }
+    .g-org {
+      background: var(--juno-white);
+      border: 1px solid var(--juno-border);
+      border-radius: 14px;
+      padding: 24px 28px;
+    }
+    .g-org__area {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--juno-primary-dark);
+      background: var(--juno-primary-light);
+      border-radius: 100px;
+      padding: 3px 12px;
+      margin-bottom: 10px;
+    }
+    .g-org__name { font-size: 1.05rem; font-weight: 700; color: var(--juno-text); line-height: 1.6; }
+    .g-org__meta {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 6px 16px;
+      margin: 14px 0 0;
+      font-size: 0.875rem;
+      line-height: 1.7;
+    }
+    .g-org__meta dt { color: var(--juno-text-sub); font-weight: 500; white-space: nowrap; }
+    .g-org__meta dd { color: var(--juno-text); margin: 0; }
+    .g-org__desc { margin-top: 14px; font-size: 0.9rem; line-height: 1.9; color: var(--juno-text-sub); }
+    .g-org__desc + .g-org__desc { margin-top: 0.7em; }
+    .g-org__key { color: var(--juno-primary-dark); font-weight: 700; }
+    .g-org__notes { margin-top: 12px; font-size: 0.8rem; line-height: 1.8; color: var(--juno-text-sub); }
+
+    .g-subhead {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--juno-text);
+      margin: 40px 0 14px;
+    }
+    .g-shared {
+      margin-top: 16px;
+      font-size: 0.875rem;
+      color: var(--juno-text-sub);
+    }
+
+    /* ===== 外部リンクボタン ===== */
+    .g-extlink {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 14px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--juno-primary-dark);
+      border: 1px solid var(--juno-primary);
+      border-radius: 100px;
+      padding: 8px 18px;
+      background: var(--juno-white);
+      transition: background 0.2s;
+    }
+    .g-extlink:hover { background: var(--juno-primary-light); }
+    .g-url { font-size: 0.85rem; word-break: break-all; color: var(--juno-primary-dark); border-bottom: 1px solid var(--juno-primary); }
+    .g-bullets { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; }
+    .g-bullets li {
+      position: relative;
+      padding-left: 16px;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--juno-text);
+    }
+    .g-bullets li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 0.7em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--juno-primary);
+    }
+
+    /* ===== 相談の順番（Junoの経験から） ===== */
+    .g-tips { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .g-tip {
+      background: var(--juno-white);
+      border-radius: 14px;
+      padding: 24px 26px;
+      box-shadow: var(--juno-shadow);
+    }
+    .g-tip--wide { grid-column: 1 / -1; }
+    .g-tip__title { font-size: 1rem; font-weight: 700; color: var(--juno-text); margin-bottom: 10px; line-height: 1.6; }
+    .g-tip p { font-size: 0.9rem; line-height: 1.95; color: var(--juno-text-sub); }
+    .g-tip p + p { margin-top: 0.8em; }
+    .g-tips-intro { max-width: 820px; margin: 0 auto 28px; font-size: 0.875rem; color: var(--juno-text-sub); text-align: center; }
+
+    /* ===== 東郷町 ===== */
+    .g-togo {
+      background: var(--juno-accent-light);
+      border-top: 4px solid var(--juno-accent);
+    }
+    .g-togo .section__label { background: var(--juno-white); color: #B8662A; }
+    .g-togo-lead {
+      max-width: 820px;
+      margin: 0 auto 28px;
+      background: var(--juno-white);
+      border-radius: 12px;
+      padding: 16px 22px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--juno-text);
+      text-align: center;
+    }
+    .g-togo .g-org { border-color: #F3D9C2; }
+    .g-togo .g-org__area { background: var(--juno-accent-light); color: #B8662A; }
+    .g-togo .g-tel { color: #B8662A; border-bottom-color: var(--juno-accent); }
+
+    /* ===== このページについて（Juno） ===== */
+    .g-about {
+      max-width: 820px;
+      margin-inline: auto;
+      border: 1px solid var(--juno-border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      background: var(--juno-white);
+    }
+    .g-about__title { font-size: 1rem; font-weight: 700; color: var(--juno-text); margin-bottom: 12px; }
+    .g-about p { font-size: 0.9rem; line-height: 1.95; color: var(--juno-text-sub); }
+    .g-about p + p { margin-top: 0.8em; }
+    .g-about__links { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 18px; }
+    .g-about__links a {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--juno-primary-dark);
+      border-bottom: 1px solid var(--juno-primary);
+      padding-bottom: 2px;
+    }
+
+    /* ===== 更新日・免責 ===== */
+    .g-updated {
+      max-width: 820px;
+      margin: 32px auto 0;
+      font-size: 0.8rem;
+      line-height: 1.9;
+      color: var(--juno-text-sub);
+    }
+    .g-updated__date { font-weight: 700; color: var(--juno-text); margin-bottom: 6px; }
+    .g-updated a { color: var(--juno-primary-dark); border-bottom: 1px solid var(--juno-primary); }
+
+    @media (max-width: 768px) {
+      .g-situations, .g-tips { grid-template-columns: 1fr; }
+      .g-voice:nth-child(2) { margin-left: 16px; }
+      .g-voice:nth-child(3) { margin-left: 32px; }
+      .g-wait, .g-org, .g-about { padding: 22px 20px; }
+      .g-tip { padding: 20px; }
+      .g-table thead { display: none; }
+      .g-table, .g-table tbody, .g-table tr, .g-table td { display: block; width: 100%; }
+      .g-table tr { border-bottom: 1px solid var(--juno-border); padding: 14px 16px; }
+      .g-table tbody tr:last-child { border-bottom: none; }
+      .g-table td { border: none; padding: 2px 0; }
+      .g-table__area { margin-bottom: 4px; color: var(--juno-primary-dark); font-size: 0.8rem; }
+    }
+
+    @media print {
+      .nav, .floating-cta, .footer__sns { display: none !important; }
+      .animate-on-scroll { opacity: 1 !important; transform: none !important; }
+      .g-extlink::after { content: " (" attr(href) ")"; font-weight: 400; font-size: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="メインナビゲーション">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="Junoトップページへ">
+      <img src="/logo.png" alt="こども訪問看護ステーションJuno" class="nav__logo-img">
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="about.html"   class="nav__link">私たちについて</a></li>
+      <li><a href="service.html" class="nav__link">事業内容</a></li>
+      <li><a href="for-professionals.html" class="nav__link">関連機関との連携</a></li>
+      <li><a href="faq.html"     class="nav__link">FAQ</a></li>
+      <li><a href="news.html"    class="nav__link">新着情報</a></li>
+      <li><a href="recruit.html" class="nav__link">採用</a></li>
+      <li><a href="contact.html" class="btn btn--primary nav__cta">お問い合わせ</a></li>
+    </ul>
+    <button class="nav__hamburger" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav__mobile" role="menu">
+    <a href="about.html"   class="nav__link" role="menuitem">私たちについて</a>
+    <a href="service.html" class="nav__link" role="menuitem">事業内容</a>
+    <a href="for-professionals.html" class="nav__link" role="menuitem">関連機関との連携</a>
+    <a href="faq.html"     class="nav__link" role="menuitem">FAQ</a>
+    <a href="news.html"    class="nav__link" role="menuitem">新着情報</a>
+    <a href="recruit.html" class="nav__link" role="menuitem">採用</a>
+    <a href="contact.html" class="btn btn--primary" role="menuitem">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <div class="section__label">Local Guide</div>
+    <h1 class="page-header__title">名古屋市南部・東部<br>こどもの発達・不登校 相談先ガイド</h1>
+    <p class="page-header__sub">緑区・天白区・瑞穂区・南区・名東区・昭和区、愛知郡東郷町の公的な相談窓口</p>
+  </div>
+</div>
+
+<!-- Section 1: リード文 -->
+<section class="section">
+  <div class="container">
+    <div class="g-lead animate-on-scroll">
+      <div class="g-voices" aria-label="よく聞かれるお悩み">
+        <p class="g-voice">「うちの子、発達が気になる」</p>
+        <p class="g-voice">「学校に行きたがらない」</p>
+        <p class="g-voice">「どこに相談したらいいのか分からない」</p>
+      </div>
+      <p>お子さまのことで心配になったとき、名古屋にはいくつもの相談窓口があります。ただ、どこが何を担当しているのかは分かりにくく、最初の一歩で迷ってしまうことが少なくありません。</p>
+      <p>このページでは、名古屋市緑区・天白区・瑞穂区・南区・名東区・昭和区、および愛知郡東郷町にお住まいの方に向けて、公的な相談先を整理しました。</p>
+      <p>どこに相談しても構いませんし、複数に相談しても構いません。まずは話を聞いてもらうところから始めていただければと思います。</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: 状況別の相談先 -->
+<section class="section" style="background:var(--juno-bg);">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Where to Go</div>
+      <h2 class="section__title">どこに相談すればよいか</h2>
+    </div>
+
+    <div class="g-situations animate-on-scroll">
+      <div class="g-situation">
+        <p class="g-situation__title">発達が気になる（就学前・就学後）</p>
+        <div class="g-situation__list">
+          <a href="#ryoiku">地域療育センター</a>
+          <p class="g-situation__note">お住まいの区ごとに担当が決まっています</p>
+        </div>
+      </div>
+      <div class="g-situation">
+        <p class="g-situation__title">学校に行きたがらない・不登校</p>
+        <div class="g-situation__list">
+          <a href="#futoko">子ども教育相談「ハートフレンドなごや」</a>
+          <a href="#futoko">子ども適応相談センター「なごやフレンドリーナウ」</a>
+        </div>
+      </div>
+      <div class="g-situation">
+        <p class="g-situation__title">子育て全般の悩み、家庭のこと</p>
+        <div class="g-situation__list">
+          <a href="#jisou">児童相談所</a>
+          <a href="#ku">お住まいの区の保健センター</a>
+        </div>
+      </div>
+      <div class="g-situation">
+        <p class="g-situation__title">発達障害について広く相談したい</p>
+        <div class="g-situation__list">
+          <a href="#hattatsu">発達障害者支援センター</a>
+        </div>
+      </div>
+      <div class="g-situation">
+        <p class="g-situation__title">児童発達支援・放課後等デイサービスを利用したい</p>
+        <div class="g-situation__list">
+          <a href="#ku">お住まいの区の区役所（民生子ども課）</a>
+          <a href="#sagasu">名古屋市「すてっぷサポート」で事業所を検索</a>
+        </div>
+      </div>
+      <div class="g-situation g-situation--sos">
+        <p class="g-situation__title">今すぐ誰かに聞いてほしい</p>
+        <div class="g-situation__list">
+          <a href="#sos24">なごやっ子SOS（24時間365日）</a>
+        </div>
+        <a href="tel:0527614152" class="g-situation__tel">052-761-4152</a>
+      </div>
+    </div>
+
+    <p class="g-togo-note animate-on-scroll">※ 愛知郡東郷町にお住まいの方は、名古屋市とは窓口が異なります。ページ下部の<a href="#togo">「東郷町にお住まいの方へ」</a>をご覧ください。</p>
+  </div>
+</section>
+
+<!-- Section 3: 地域療育センター -->
+<section class="section g-anchor" id="ryoiku">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Developmental Support Center</div>
+      <h2 class="section__title">地域療育センター</h2>
+    </div>
+
+    <div class="g-body animate-on-scroll">
+      <p>名古屋市が設置している、発達に特性や不安のあるお子さんを支援する施設です。診療所と児童発達支援センター（通園部）を一体的に運営しています。</p>
+      <p>医師、保健師、看護師、理学療法士、作業療法士、言語聴覚士、心理担当職員、保育士、児童指導員、栄養士、ケースワーカー、相談支援専門員などが配置されています。</p>
+      <p>原則として、お住まいの区を担当する地域療育センターを利用します。</p>
+
+      <h3 class="g-h3">担当センター一覧</h3>
+      <div class="g-table-wrap">
+        <table class="g-table">
+          <thead>
+            <tr><th scope="col">お住まいの区</th><th scope="col">担当センター・所在地</th><th scope="col">電話</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="g-table__area">緑区・南区</td>
+              <td><span class="g-table__name">南部地域療育センター そよ風</span><br><span class="g-table__addr">南区三吉町6-17</span></td>
+              <td><a href="tel:0526137744" class="g-tel">052-613-7744</a></td>
+            </tr>
+            <tr>
+              <td class="g-table__area">瑞穂区・天白区・昭和区</td>
+              <td><span class="g-table__name">名古屋市中央療育センター</span><br><span class="g-table__addr">昭和区折戸町4-16（名古屋市児童福祉センター内）</span></td>
+              <td><a href="tel:0527576126" class="g-tel">052-757-6126</a></td>
+            </tr>
+            <tr>
+              <td class="g-table__area">名東区</td>
+              <td><span class="g-table__name">東部地域療育センター ぽけっと</span><br><span class="g-table__addr">千種区猫洞通1-15</span></td>
+              <td><a href="tel:0527845300" class="g-tel">052-784-5300</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="g-h3">利用の流れ</h3>
+      <ol class="g-steps">
+        <li>お電話で相談日時を予約します</li>
+        <li>予約の日時に、面接・診察・検査などを行います</li>
+        <li>専門のスタッフが話し合い、お子さんに合った発達支援の方法を提案してもらえます</li>
+      </ol>
+      <p class="g-steps-after">相談後も、必要に応じて再診などのフォローがあります。</p>
+
+      <h3 class="g-h3">費用について</h3>
+      <p class="g-text">医師の診察や訓練を受ける場合は、診療報酬制度に基づく自己負担分が必要です。子ども医療証などの福祉医療助成制度の医療証が使用できます。</p>
+      <p class="g-text">通園部（児童発達支援センター）を利用する場合は、児童発達支援給付制度に基づく利用料が必要ですが、3歳から5歳（学年齢）までは国の制度により無償化されています。3歳未満についても、名古屋市独自の制度により無償化されています。</p>
+
+      <div class="g-wait">
+        <p class="g-wait__title">初診の待機について</p>
+        <p>地域療育センターは初診の予約が込み合っており、一般的に数か月ほどお待ちいただくことがあります。</p>
+        <p>予約を取ったあと、「待っている間、どうすればいいのか」という状態になりやすいところです。</p>
+        <p><strong>予約を取ったうえで、並行して他の相談先も利用されることをおすすめします。</strong>複数の窓口に相談していただいて構いません。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: 不登校の相談先 -->
+<section class="section g-anchor" id="futoko" style="background:var(--juno-bg);">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">School Refusal</div>
+      <h2 class="section__title">不登校について相談したいとき</h2>
+    </div>
+
+    <div class="g-body g-orgs animate-on-scroll">
+      <div class="g-org">
+        <p class="g-org__name">子ども教育相談「ハートフレンドなごや」</p>
+        <dl class="g-org__meta">
+          <dt>所在地</dt><dd>名古屋市教育センター内（熱田区神宮3-6-14）</dd>
+          <dt>電話</dt><dd><a href="tel:0526838222" class="g-tel">052-683-8222</a></dd>
+          <dt>受付</dt><dd>月〜金 9:30〜19:00／土 9:30〜12:00（祝日・年末年始を除く）</dd>
+        </dl>
+        <p class="g-org__desc">名古屋市にお住まいの幼児から高校生年齢までのお子さん本人、保護者、名古屋市立学校（園）の関係者が対象です。いじめ・不登校、発達の様子、就学や進路など、教育や養育に関するあらゆる内容を相談できます。</p>
+        <p class="g-org__desc g-org__key">名古屋市の不登校に関する相談は、まずここが総合窓口になります。</p>
+      </div>
+
+      <div class="g-org">
+        <p class="g-org__name">子ども適応相談センター「なごやフレンドリーナウ」</p>
+        <dl class="g-org__meta">
+          <dt>電話</dt><dd><a href="tel:0525219640" class="g-tel">052-521-9640</a></dd>
+          <dt>受付</dt><dd>月〜金 9:00〜16:00（祝日・年末年始を除く）</dd>
+        </dl>
+        <p class="g-org__desc">心理的な理由による不登校の相談に応じています。不登校の小中学生が対象です。</p>
+      </div>
+
+      <div class="g-org">
+        <p class="g-org__name">子どもSOSほっとライン24</p>
+        <dl class="g-org__meta">
+          <dt>電話</dt><dd><a href="tel:0570078310" class="g-tel">0570-078310</a></dd>
+        </dl>
+        <p class="g-org__desc">いじめの問題に悩むお子さんや保護者が、夜間・休日を含めて24時間いつでも電話相談できます。愛知県と連携して実施されています。</p>
+      </div>
+
+      <div class="g-org">
+        <p class="g-org__name">名古屋市子ども・若者総合相談センター</p>
+        <dl class="g-org__meta">
+          <dt>本部</dt><dd>東区泉1-1-4 名古屋市教育館8階</dd>
+          <dt>金山ブランチ</dt><dd>中区正木4-9-1 笹とみビル2階</dd>
+          <dt>電話</dt><dd><a href="tel:0529612544" class="g-tel">052-961-2544</a></dd>
+          <dt>受付</dt><dd>月〜土 10:00〜17:00（祝休日・年末年始を除く）</dd>
+        </dl>
+        <p class="g-org__desc">ニートやひきこもり、不登校など、さまざまな悩みを持つおおむね39歳までのお子さん・若者とそのご家族が対象です。</p>
+        <p class="g-org__desc">センターまで来られない場合は、会える場所まで出向いてもらえます。SNSを活用した相談も行われています。面談は予約制です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5: 児童相談所 -->
+<section class="section g-anchor" id="jisou">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Child Guidance Center</div>
+      <h2 class="section__title">児童相談所</h2>
+    </div>
+
+    <div class="g-body animate-on-scroll">
+      <p>養護・保健・心身障害・育成（不登校・しつけなど）といった、児童相談全般に対応しています。18歳未満のお子さんが対象です。</p>
+
+      <div class="g-orgs" style="margin-top:28px;">
+        <div class="g-org">
+          <span class="g-org__area">瑞穂区・南区・緑区・天白区にお住まいの方</span>
+          <p class="g-org__name">名古屋市東部児童相談所</p>
+          <dl class="g-org__meta">
+            <dt>所在地</dt><dd>緑区鳴海町字小森48-5</dd>
+            <dt>電話</dt><dd><a href="tel:0528994630" class="g-tel">052-899-4630</a></dd>
+            <dt>アクセス</dt><dd>地下鉄桜通線「野並駅」から徒歩8分</dd>
+          </dl>
+        </div>
+        <div class="g-org">
+          <span class="g-org__area">昭和区・名東区にお住まいの方</span>
+          <p class="g-org__name">名古屋市中央児童相談所</p>
+          <dl class="g-org__meta">
+            <dt>所在地</dt><dd>昭和区折戸町4-16（名古屋市児童福祉センター内）</dd>
+            <dt>電話</dt><dd><a href="tel:0527576111" class="g-tel">052-757-6111</a></dd>
+          </dl>
+        </div>
+      </div>
+      <p class="g-shared">受付：月〜金 8:45〜17:15（祝日・休日を除く）</p>
+
+      <h3 class="g-subhead g-anchor" id="sos24">24時間つながる相談窓口</h3>
+      <div class="g-orgs">
+        <div class="g-org" style="background:var(--juno-primary-light);border-color:transparent;">
+          <p class="g-org__name">なごやっ子SOS</p>
+          <dl class="g-org__meta">
+            <dt>電話</dt><dd><a href="tel:0527614152" class="g-tel">052-761-4152</a></dd>
+          </dl>
+          <p class="g-org__desc">24時間365日、子育ての悩みやお子さんに関する相談を受け付けています。</p>
+        </div>
+        <div class="g-org" style="background:var(--juno-primary-light);border-color:transparent;">
+          <p class="g-org__name">児童相談所虐待対応ダイヤル</p>
+          <dl class="g-org__meta">
+            <dt>電話</dt><dd><a href="tel:189" class="g-tel">189</a>（全国共通・通話料無料）</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6: 発達障害者支援センター -->
+<section class="section g-anchor" id="hattatsu" style="background:var(--juno-bg);">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Developmental Disorder Support</div>
+      <h2 class="section__title">発達障害者支援センター</h2>
+    </div>
+
+    <div class="g-body animate-on-scroll">
+      <div class="g-org">
+        <p class="g-org__name">名古屋市発達障害者支援センター「りんくす名古屋」</p>
+        <dl class="g-org__meta">
+          <dt>所在地</dt><dd>〒466-0858 名古屋市昭和区折戸町4-16（名古屋市児童福祉センター内）</dd>
+          <dt>電話</dt><dd><a href="tel:0527576140" class="g-tel">052-757-6140</a></dd>
+          <dt>対応時間</dt><dd>月〜金 8:45〜17:15（祝日・休日を除く）</dd>
+          <dt>アクセス</dt><dd>地下鉄鶴舞線「川名」駅／市バス「宮裏」</dd>
+        </dl>
+        <p class="g-org__desc">発達障害のある方とそのご家族、支援者や関係機関が対象です。年齢を問わず相談できます。</p>
+        <p class="g-org__notes">※ こちらでは発達障害の診断・検査は行っていません。<br>※ 名古屋市外にお住まいの方は、あいち発達障害者支援センターが窓口となります（下記<a href="#togo" style="color:var(--juno-primary-dark);font-weight:600;">「東郷町にお住まいの方へ」</a>参照）。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 7: 区の窓口 -->
+<section class="section g-anchor" id="ku">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Ward Offices</div>
+      <h2 class="section__title">お住まいの区の窓口</h2>
+    </div>
+
+    <div class="g-body g-orgs animate-on-scroll">
+      <div class="g-org">
+        <p class="g-org__name">保健センター</p>
+        <p class="g-org__desc">各区に保健センターがあり、乳幼児健診を実施しています。健診の場でお子さんの発達について相談することもできますし、健診以外の時期でも保健師に相談できます。</p>
+        <p class="g-org__desc">「発達が気になるけれど、いきなり専門機関は敷居が高い」というときの入口として利用しやすい窓口です。</p>
+        <a href="https://www.city.nagoya.jp/kurashi/category/19-9-3-0-0-0-0-0-0-0.html" target="_blank" rel="noopener" class="g-extlink">名古屋市 保健センター一覧を見る
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="g-org">
+        <p class="g-org__name">区役所 民生子ども課</p>
+        <p class="g-org__desc">児童福祉に関する窓口です。児童発達支援や放課後等デイサービスを利用するための受給者証の申請も、こちらで行います。</p>
+        <a href="https://www.city.nagoya.jp/shisei/gaiyou/1015754/1015781/index.html" target="_blank" rel="noopener" class="g-extlink">名古屋市 区役所一覧を見る
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 8: 事業所・医療機関を探す -->
+<section class="section g-anchor" id="sagasu" style="background:var(--juno-bg);">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Find Services</div>
+      <h2 class="section__title">事業所や医療機関を探すとき</h2>
+    </div>
+
+    <div class="g-body g-orgs animate-on-scroll">
+      <div class="g-org">
+        <p class="g-org__name">名古屋市子ども発達支援サイト「すてっぷサポート」</p>
+        <p style="margin-top:6px;"><a href="https://stepsupport.city.nagoya.jp/" target="_blank" rel="noopener" class="g-url">https://stepsupport.city.nagoya.jp/</a></p>
+        <p class="g-org__desc">名古屋市が運営する、子どもの発達支援に関する情報サイトです。以下の情報を調べることができます。</p>
+        <ul class="g-bullets">
+          <li>児童発達支援・放課後等デイサービスの指定事業所の検索</li>
+          <li>子どもの発達の診療をしている市内の医療機関</li>
+          <li>地域療育センターの詳しい紹介</li>
+          <li>児童発達支援給付・放課後等デイサービス給付の手続き</li>
+          <li>名古屋市内で活動する保護者団体・保護者サークル</li>
+        </ul>
+        <p class="g-org__desc g-org__key">名古屋市内で発達に関する情報を探すときは、まずこのサイトをご覧いただくのが確実です。</p>
+        <a href="https://stepsupport.city.nagoya.jp/" target="_blank" rel="noopener" class="g-extlink">すてっぷサポートを開く
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="g-org">
+        <p class="g-org__name">診断を受けたいとき</p>
+        <p class="g-org__desc">発達障害の診断は医師が行います。「すてっぷサポート」に、子どもの発達の診療をしている市内の医療機関の一覧が掲載されています。</p>
+        <p class="g-org__desc">地域療育センターにも診療所が併設されており、小児科・児童精神科などの診察を受けられます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 9: 相談の順番に迷ったら（Junoの実務経験から） -->
+<section class="section g-anchor" id="junban">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">First Steps</div>
+      <h2 class="section__title">相談の順番に迷ったとき</h2>
+    </div>
+    <p class="g-tips-intro animate-on-scroll">ご家族からよく伺うお悩みをもとに、Junoのこれまでの訪問の経験からお伝えします。</p>
+
+    <div class="g-tips animate-on-scroll" style="max-width:960px;margin-inline:auto;">
+      <div class="g-tip">
+        <p class="g-tip__title">まずは「話を聞いてもらう」ところから</p>
+        <p>診断を受けるかどうか、サービスを利用するかどうかは、あとから決めていただいて構いません。「相談する」ことと「何かを決める」ことは別です。</p>
+      </div>
+      <div class="g-tip">
+        <p class="g-tip__title">複数の窓口に相談して構いません</p>
+        <p>「一か所に決めなければいけない」ということはありません。保健センターに相談しながら、地域療育センターの予約を取る、といった進め方もできます。</p>
+      </div>
+      <div class="g-tip">
+        <p class="g-tip__title">待機期間があることを前提に</p>
+        <p>地域療育センターは初診まで時間がかかることがあります。予約を取ったうえで、その間にできることを探しておくと、待つ時間の不安が少し和らぎます。</p>
+      </div>
+      <div class="g-tip">
+        <p class="g-tip__title">診断がなくても利用できる支援があります</p>
+        <p>「診断がつかないと、どんなサービスも使えない」と感じてしまうことがあるかもしれません。</p>
+        <p>実際には、診断を待たずに相談できる窓口や、利用できる支援があります。診断を待っている間も、できることはあります。</p>
+      </div>
+      <div class="g-tip g-tip--wide">
+        <p class="g-tip__title">「どこに相談したらいいか分からない」のは自然なことです</p>
+        <p>窓口が分かれていて、それぞれ担当する内容が違うため、最初の一歩で迷うのは当然です。</p>
+        <p>迷われた場合は、まずお住まいの区の保健センター、または地域療育センターにお電話いただくと、状況に応じて適切な窓口を案内してもらえます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 10: 東郷町にお住まいの方へ -->
+<section class="section g-togo g-anchor" id="togo">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Togo Town</div>
+      <h2 class="section__title">愛知郡東郷町にお住まいの方へ</h2>
+    </div>
+    <p class="g-togo-lead animate-on-scroll">東郷町は名古屋市外のため、相談窓口が異なります。</p>
+
+    <div class="g-body g-orgs animate-on-scroll">
+      <div class="g-org">
+        <span class="g-org__area">発達に関する相談</span>
+        <p class="g-org__name">東郷町 こども保健推進室</p>
+        <dl class="g-org__meta">
+          <dt>所在地</dt><dd>愛知郡東郷町大字春木字西羽根穴2225-4（イーストプラザいこまい館内）</dd>
+          <dt>電話</dt><dd><a href="tel:0561375813" class="g-tel">0561-37-5813</a></dd>
+        </dl>
+        <p class="g-org__desc">町の窓口が、発達相談の入口となります。</p>
+      </div>
+
+      <div class="g-org">
+        <span class="g-org__area">発達障害について広く相談したいとき</span>
+        <p class="g-org__name">あいち発達障害者支援センター</p>
+        <dl class="g-org__meta">
+          <dt>所在地</dt><dd>春日井市神屋町713-8（愛知県医療療育総合センター内）</dd>
+          <dt>電話相談</dt><dd><a href="tel:0568880849" class="g-tel">0568-88-0849</a><br>平日 10:00〜12:00／13:00〜16:00</dd>
+          <dt>来所相談</dt><dd>要予約 <a href="tel:0568880811" class="g-tel">0568-88-0811</a>（内線8109）<br>月曜・木曜（祝日・年末年始を除く）</dd>
+          <dt>メール相談</dt><dd><a href="mailto:asca@pref.aichi.lg.jp" class="g-tel" style="white-space:normal;">asca@pref.aichi.lg.jp</a><br>（件名に「メール相談」とご記入ください）</dd>
+        </dl>
+        <p class="g-org__desc">愛知県内（名古屋市を除く）にお住まいの方が対象です。</p>
+      </div>
+
+      <div class="g-org">
+        <span class="g-org__area">児童相談</span>
+        <p class="g-org__name">愛知県中央児童・障害者相談センター</p>
+        <dl class="g-org__meta">
+          <dt>所在地</dt><dd>名古屋市中区三の丸2-6-1</dd>
+          <dt>電話</dt><dd><a href="tel:0529617250" class="g-tel">052-961-7250</a></dd>
+        </dl>
+        <p class="g-org__desc">瀬戸市・尾張旭市・豊明市・日進市・清須市・北名古屋市・長久手市・東郷町・豊山町を管轄しています。</p>
+      </div>
+
+      <div class="g-org">
+        <span class="g-org__area">いじめ・不登校に関する相談</span>
+        <p class="g-org__name">愛知県教育委員会 あいち学び推進課<br>家庭教育（いじめ・不登校等）相談窓口</p>
+        <dl class="g-org__meta">
+          <dt>電話</dt><dd><a href="tel:0529610900" class="g-tel">052-961-0900</a></dd>
+          <dt>受付</dt><dd>月〜金 9:00〜16:00（祝日・年末年始を除く）</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 11: このページについて（Juno） -->
+<section class="section" style="background:var(--juno-bg);">
+  <div class="container">
+    <div class="g-about animate-on-scroll">
+      <p class="g-about__title">このページについて</p>
+      <p>このページは、こども訪問看護ステーションJunoが作成しています。</p>
+      <p>Junoは、名古屋市緑区・天白区・瑞穂区・南区を中心に、名東区・昭和区、愛知郡東郷町にも訪問している、0歳から15歳のお子さまのご自宅へ伺う、発達支援に特化した訪問看護ステーションです。</p>
+      <p>診断の有無を問わず、ご家庭での関わり方をご家族と一緒に考えます。医療保険が適用されるため、ご家庭の費用負担はありません。訪問開始には主治医の指示書が必要ですが、手続きについてもご相談に応じます。</p>
+      <div class="g-about__links">
+        <a href="/service.html">事業内容を見る</a>
+        <a href="/contact.html">ご相談・お問い合わせ</a>
+      </div>
+    </div>
+
+    <!-- Section 12: 更新日と免責 -->
+    <div class="g-updated">
+      <p class="g-updated__date">最終更新：<time datetime="2026-09-29">2026年9月29日</time></p>
+      <p>掲載内容は作成時点のものです。連絡先や受付時間は変更される場合がありますので、ご利用の際は各機関にご確認ください。</p>
+      <p>誤りにお気づきの際は、<a href="/contact.html">お問い合わせフォーム</a>よりお知らせいただけますと幸いです。</p>
+    </div>
+  </div>
+</section>
+
+<!-- フッター -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <img src="/logo.png" alt="こども訪問看護ステーションJuno" class="footer__logo-img" loading="lazy">
+        <div class="footer__info">
+          〒458-0007 名古屋市緑区篭山2丁目104<br>神谷ビル2階A<br>
+          TEL: <a href="tel:0526273959" style="color:inherit;">052-627-3959</a> ／ FAX: 052-627-3960<br>
+          受付：9:00〜18:00（土日定休）<br>
+          対応エリア：名古屋市緑区・天白区・瑞穂区・南区・名東区・昭和区、東郷町、およびその他隣接エリア<br><span style="font-size:0.75rem;opacity:0.65;">Juno 東京Lab（〒107-0062 東京都港区南青山3丁目1番36号 青山丸竹ビル6F）</span>
+        </div>
+        <div class="footer__sns">
+          <a href="https://note.com/junobranch" target="_blank" rel="noopener noreferrer" class="footer__sns-link" aria-label="noteを見る">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/juno_kango_hattatsu_nagoya?igsh=aDZpNTRiOXg5anJn&utm_source=qr" target="_blank" rel="noopener noreferrer" class="footer__sns-link" aria-label="Instagramを見る">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="footer__heading">サイトマップ</p>
+        <nav class="footer__nav" aria-label="フッターナビゲーション">
+          <a href="about.html">私たちについて</a>
+          <a href="service.html">事業内容・サービス</a>
+          <a href="for-professionals.html">関連機関との連携</a>
+          <a href="faq.html">よくあるご質問</a>
+          <a href="news.html">新着情報</a>
+          <a href="recruit.html">採用情報</a>
+          <a href="contact.html">お問い合わせ</a>
+          <a href="privacy.html">プライバシーポリシー</a>
+          <a href="important-matters.html">重要事項説明書</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer__heading">お問い合わせ</p>
+        <div class="footer__info">
+          <a href="mailto:hello@junochild.com" style="color:inherit;">hello@junochild.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 株式会社Juno Branch. All rights reserved.</p>
+      <p class="footer__copy">運営：株式会社Juno Branch</p>
+    </div>
+  </div>
+</footer>
+
+<!-- フローティングCTA -->
+<div class="floating-cta">
+  <a href="/contact.html" class="floating-cta__btn" aria-label="相談してみる">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    相談してみる
+  </a>
+</div>
+
+<script src="/js/main.js"></script>
+<script src="/js/tracking.js"></script>
+</body>
+</html>
