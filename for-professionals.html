@@ -133,6 +133,22 @@
       color: var(--juno-text-sub);
     }
     .pro-lead p + p { margin-top: 1.2em; }
+    .pro-lead-img {
+      max-width: 780px;
+      margin: 40px auto 0;
+    }
+    .pro-lead-img img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1672 / 941;
+      border-radius: 16px;
+      box-shadow: 0 6px 24px rgba(8, 145, 141, 0.10);
+    }
+    @media (max-width: 768px) {
+      .pro-lead-img { margin-top: 28px; }
+      .pro-lead-img img { border-radius: 12px; }
+    }
 
     /* ===== 担うこと／担わないこと ===== */
     .do-dont-grid {
@@ -573,6 +589,9 @@
       <p>このページでは、お子さまとご家族に関わる支援機関・医療機関・教育機関の皆さまに向けて、Junoが担う範囲、担わない範囲、連携の進め方をご説明します。</p>
       <p>ご紹介を検討される際の判断材料としてご覧ください。ご不明な点は、お電話（<a href="tel:0526273959" style="color:var(--juno-primary);">052-627-3959</a>）でもお気軽にお問い合わせください。</p>
     </div>
+    <figure class="pro-lead-img animate-on-scroll">
+      <img src="webサイト用画像/医師・相談員・教師.jpg" alt="医師・相談支援専門員・教員のイメージ" width="1672" height="941" loading="lazy">
+    </figure>
   </div>
 </section>
 
