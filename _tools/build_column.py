@@ -265,7 +265,7 @@ for idx, a in enumerate(arts):
             + '      </div>\n'
             + '      <div class="col-sign"><strong>こども訪問看護ステーションJuno</strong><br>'
               'このコラムは、訪問看護の現場での経験と、学術文献をもとに作成しています。<br>'
-              '記載内容は一般的な情報であり、個々のお子さんへの対応を示すものではありません。</div>\n'
+              '記載内容は一般的な情報であり、個々のお子さまへの対応を示すものではありません。</div>\n'
             + '    </div>\n  </div>\n</section>\n'
             + TAIL)
     open(f'column/{a["slug"]}.html', 'w', encoding='utf-8').write(page)
@@ -281,15 +281,15 @@ cards = ''.join(
 ''' for a in reversed(arts))
 index = (HEAD_TOP
          + '  <title>発達コラム | こども訪問看護ステーションJuno</title>\n'
-         + '  <meta name="description" content="お子さんの発達に関する困りごとについて、研究知見をもとに整理したコラムです。こども訪問看護ステーションJunoが作成しています。">\n'
+         + '  <meta name="description" content="お子さまの発達に関する困りごとについて、研究知見をもとに整理したコラムです。こども訪問看護ステーションJunoが作成しています。">\n'
          + f'  <link rel="canonical" href="{SITE}/column/">\n'
          + HEAD_LINKS + STYLE + '</head>\n<body>\n\n' + NAV + '\n\n'
          + '<div class="page-header">\n  <div class="container">\n    <div class="section__label">Column</div>\n'
          + '    <h1 class="page-header__title">発達コラム</h1>\n  </div>\n</div>\n\n'
          + '<section class="section">\n  <div class="container">\n'
          + '    <div class="col-lead">\n'
-         + '      <p>お子さんの発達に関する困りごとについて、研究で明らかになっていることをもとに整理しています。</p>\n'
-         + '      <p>一般的な情報であり、個々のお子さんへの対応を示すものではありませんが、ご家庭での見かたを考える材料になればと思います。</p>\n'
+         + '      <p>お子さまの発達に関する困りごとについて、研究で明らかになっていることをもとに整理しています。</p>\n'
+         + '      <p>一般的な情報であり、個々のお子さまへの対応を示すものではありませんが、ご家庭での見かたを考える材料になればと思います。</p>\n'
          + '    </div>\n'
          + '    <div class="col-cards">\n' + cards + '    </div>\n'
          + '  </div>\n</section>\n'
