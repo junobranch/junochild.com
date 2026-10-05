@@ -53,10 +53,19 @@
     .policy-logo { display: block; width: 100%; max-width: 140px; height: auto; }
     .policy-logo-block p:last-child { margin-bottom: 0; }
 
+    /* 国の啓発ポスター（縮小表示、クリックで原本PDF） */
+    .policy-poster { display: flex; align-items: flex-start; gap: 24px; }
+    .policy-poster__thumb { flex: none; width: 180px; display: block; border: 1px solid var(--juno-border); border-radius: 6px; overflow: hidden; background: var(--juno-white); transition: box-shadow 0.2s; }
+    .policy-poster__thumb:hover { box-shadow: var(--juno-shadow); }
+    .policy-poster__thumb img { display: block; width: 100%; height: auto; }
+    .policy-poster__body p:last-child { margin-bottom: 0; }
+
     @media (max-width: 767px) {
       .policy-section--soft { padding: 20px 20px 10px; }
       .policy-logo-block { flex-direction: column; text-align: center; }
       .policy-logo { max-width: 110px; }
+      .policy-poster { flex-direction: column; align-items: center; text-align: center; }
+      .policy-poster__thumb { width: 200px; }
     }
   </style>
 </head>
@@ -193,6 +202,19 @@
           <div>
             <p>Junoは、愛知県カスタマーハラスメント防止条例の趣旨に賛同し、カスハラのない、誰もが安心して過ごせる地域づくりに取り組んでいます。</p>
             <p>→ <a href="https://no-customerharassment.pref.aichi.jp/" target="_blank" rel="noopener noreferrer">あいちカスハラ防止対策ナビ</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="policy-section">
+        <h2>カスタマーハラスメント防止の啓発ポスター</h2>
+        <div class="policy-poster">
+          <a class="policy-poster__thumb" href="assets/pdf/poster_casuhara_B2_4-2.pdf" target="_blank" rel="noopener" aria-label="啓発ポスター「STOP！カスタマーハラスメント」をPDFで開く">
+            <img src="assets/img/poster_stop_kasuhara.jpg" alt="啓発ポスター「STOP！カスタマーハラスメント ── みなさまに気持ちよく過ごしていただくために」" width="640" height="905" loading="lazy">
+          </a>
+          <div class="policy-poster__body">
+            <p>国の関係省庁（厚生労働省、消費者庁、警察庁など）が作成した、カスタマーハラスメント防止の啓発ポスターです。</p>
+            <p>→ <a href="assets/pdf/poster_casuhara_B2_4-2.pdf" target="_blank" rel="noopener">ポスターを拡大して見る（PDF）</a></p>
           </div>
         </div>
       </div>
