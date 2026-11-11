@@ -473,6 +473,16 @@
       .info-share-node { white-space: normal; }
       .info-share-box { padding: 24px 20px; }
     }
+
+    /* 連携機関の声カード */
+    .vc-card { display: grid; grid-template-columns: 240px 1fr; gap: 24px; align-items: center; max-width: 860px; margin-inline: auto; background: var(--juno-white); border: 1px solid var(--juno-border); border-radius: 16px; padding: 22px; box-shadow: var(--juno-shadow); transition: border-color 0.2s; }
+    .vc-card:hover { border-color: var(--juno-primary); }
+    .vc-card img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; display: block; }
+    .vc-card__tag { display: inline-block; font-size: 0.72rem; font-weight: 700; color: var(--juno-primary-dark); background: var(--juno-primary-light); border-radius: 100px; padding: 2px 10px; margin-bottom: 8px; }
+    .vc-card__quote { font-size: 1rem; font-weight: 600; line-height: 1.8; color: var(--juno-text); margin-bottom: 8px; }
+    .vc-card__who { font-size: 0.82rem; color: var(--juno-text-sub); line-height: 1.7; margin-bottom: 10px; }
+    .vc-card__more { font-size: 0.85rem; font-weight: 600; color: var(--juno-primary-dark); }
+    @media (max-width: 640px) { .vc-card { grid-template-columns: 1fr; gap: 14px; padding: 16px; } }
   </style>
 </head>
 <body>
@@ -966,6 +976,16 @@
         <p class="voice-card__author">保護者（父）</p>
       </div>
     </div>
+    <p style="text-align:center;font-size:0.9rem;font-weight:700;color:var(--juno-text);margin:48px 0 16px;">連携している支援機関からも、声をいただいています</p>
+    <a class="vc-card animate-on-scroll" href="/voices/re-ishida.html">
+      <img src="/assets/img/voices/re-ishida-1.jpg" alt="相談支援事業所あーるいーの石田玲弥さん" width="1200" height="900" loading="lazy">
+      <div>
+        <span class="vc-card__tag">連携機関の声 vol.1</span>
+        <p class="vc-card__quote">「訪問看護は、多くのご家族にほとんど知られていません。子どもの医療証で使えることも、あまり知られていません」</p>
+        <p class="vc-card__who">相談支援事業所あーるいー（名古屋市天白区）<br>相談支援専門員 石田 玲弥さん</p>
+        <span class="vc-card__more">インタビューを読む ＞</span>
+      </div>
+    </a>
   </div>
 </section>
 

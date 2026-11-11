@@ -581,6 +581,16 @@
       .pro-tab-panel { padding: 24px 20px; }
       .hoikujo-box { padding: 20px 20px; }
     }
+
+    /* 連携機関の声カード */
+    .vc-card { display: grid; grid-template-columns: 240px 1fr; gap: 24px; align-items: center; max-width: 860px; margin-inline: auto; background: var(--juno-white); border: 1px solid var(--juno-border); border-radius: 16px; padding: 22px; box-shadow: var(--juno-shadow); transition: border-color 0.2s; }
+    .vc-card:hover { border-color: var(--juno-primary); }
+    .vc-card img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; display: block; }
+    .vc-card__tag { display: inline-block; font-size: 0.72rem; font-weight: 700; color: var(--juno-primary-dark); background: var(--juno-primary-light); border-radius: 100px; padding: 2px 10px; margin-bottom: 8px; }
+    .vc-card__quote { font-size: 1rem; font-weight: 600; line-height: 1.8; color: var(--juno-text); margin-bottom: 8px; }
+    .vc-card__who { font-size: 0.82rem; color: var(--juno-text-sub); line-height: 1.7; margin-bottom: 10px; }
+    .vc-card__more { font-size: 0.85rem; font-weight: 600; color: var(--juno-primary-dark); }
+    @media (max-width: 640px) { .vc-card { grid-template-columns: 1fr; gap: 14px; padding: 16px; } }
   </style>
 </head>
 <body>
@@ -1014,6 +1024,25 @@
         <p style="font-size:0.78rem;color:var(--juno-text-sub);margin-top:12px;line-height:1.75;">実際に、医療的なケアは病院にて実施され、発達支援に関するケアはJunoが担う形でご利用いただいているケースもあります。併用の可否は、お子さまの状態や指示書の内容により異なりますので、個別にご相談ください。</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- 連携機関の声 -->
+<section class="section" style="background:var(--juno-bg);">
+  <div class="container">
+    <div class="section__head animate-on-scroll">
+      <div class="section__label">Partner Voice</div>
+      <h2 class="section__title">連携機関の声</h2>
+    </div>
+    <a class="vc-card animate-on-scroll" href="/voices/re-ishida.html">
+      <img src="/assets/img/voices/re-ishida-1.jpg" alt="相談支援事業所あーるいーの石田玲弥さん" width="1200" height="900" loading="lazy">
+      <div>
+        <span class="vc-card__tag">連携機関の声 vol.1</span>
+        <p class="vc-card__quote">「日々の暮らしの中に入って、こまやかに関わってくれる存在は心強いです」</p>
+        <p class="vc-card__who">相談支援事業所あーるいー（名古屋市天白区）<br>相談支援専門員 石田 玲弥さん</p>
+        <span class="vc-card__more">インタビューを読む ＞</span>
+      </div>
+    </a>
   </div>
 </section>
 
