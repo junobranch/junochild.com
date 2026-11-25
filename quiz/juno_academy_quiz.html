@@ -640,8 +640,8 @@ function tryGate(){
    PASS_OVERRIDE：合格済み扱い（「合格済」バッジ＋以降の章を解放）
    OPEN_OVERRIDE：ロック解除のみ（バッジは付けない）
    ※不要になったら該当行を削除するだけで元に戻せます */
-const PASS_OVERRIDE = { '047': ['ch2'], '022': ['ch2'] };
-const OPEN_OVERRIDE = { '047': ['ch3','ch4'], '022': ['ch3','ch4'] };
+const PASS_OVERRIDE = { '047': ['ch2'], '022': ['ch2'], '050': ['ch2'] };
+const OPEN_OVERRIDE = { '047': ['ch3','ch4'], '022': ['ch3','ch4'], '050': ['ch3','ch4'] };
 
 /* 合格判定：手動措置＋社員番号別キー＋旧バージョン（社員番号なしキー）も引き継ぐ */
 function chapterPassed(emp, key){
